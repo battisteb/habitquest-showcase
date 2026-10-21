@@ -230,4 +230,5 @@ a.store:hover { transform: translate(-3px, -3px); filter: drop-shadow(6px 6px 0 
 .beta ol { margin: 14px 0 0; padding-left: 22px; color: var(--text-2); display: grid; gap: 6px; }
 .beta-cta { text-align: center; }
 .beta-cta p { font-size: 14px; margin-top: 12px; }
+.beta-cta .play + .play { margin-top: 14px; }
 @media (max-width: 760px) { .beta { grid-template-columns: 1fr; padding: 28px 20px; } }
