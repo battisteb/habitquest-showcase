@@ -6,7 +6,7 @@ base: privacy-policy
 
 # HabitQuest — Privacy Policy
 
-*Last updated: October 7, 2026*
+*Last updated: November 3, 2026*
 
 HabitQuest ("the app") is published by **Battiste Boungo** ("we"). This policy explains what data the app collects, why, and the choices you have. Contact: **batto060504@gmail.com**.
 
@@ -22,17 +22,19 @@ HabitQuest ("the app") is published by **Battiste Boungo** ("we"). This policy e
 | Friends, duels, challenges, in-app notifications | Social features | Supabase |
 | Time zone (e.g. Europe/Paris) and app language | Count streaks and daily limits on your local day; send notifications and e-mails in your language | Supabase |
 | Platform you last used (web, iPhone or Android) and when you last opened the app | Aggregate usage statistics (e.g. how many players use Android); never shown to other players | Supabase |
+| In-app activity events, only once we turn this feature on: for example that you opened the Premium screen and from where, started a trial or a purchase, or viewed a recap; and which version of a screen you saw when we compare two versions (A/B test) | Understand what helps players and improve the app; never shown to other players, never sold or shared | Supabase |
 | Push notification token | Send reminders and game notifications | Supabase |
+| Notification settings: reminder times, tone, quiet hours, friends' notifications on or off | Send reminders at the right time, never during your quiet hours | Supabase, and on your device |
 | Messages you send to Support, with the app version, platform and language | Answer you and fix problems | Supabase |
 | On gethabitquest.com, only if you join the waitlist: your email address, the site language and your consent | Send you one e-mail when the apps are available | Supabase |
 | Purchase history and subscription status | Unlock Premium | RevenueCat, Apple / Google |
 | Advertising identifier (IDFA / Android advertising ID) — **only if you allow tracking** | Show ads to free users | Google AdMob |
 
-When the app or the website hits an error, a technical report is sent to Sentry so we can fix it: the error and where it happened in the code, the app version, the device or browser model and the operating system. These reports contain no name, e-mail, habits or messages (personal data collection is turned off). We do not use analytics SDKs, and we do not sell your data.
+When the app or the website hits an error, a technical report is sent to Sentry so we can fix it: the error and where it happened in the code, the app version, the device or browser model and the operating system. These reports contain no name, e-mail, habits or messages (personal data collection is turned off). We do not use third-party analytics SDKs (the activity events above stay on our own servers), and we do not sell your data.
 
 ## 2. Advertising and tracking
 
-Free users see ads served by Google AdMob. On iOS, the app asks for permission (App Tracking Transparency) before any personalized ads; if you decline, only non-personalized ads are requested. Premium users see no ads. See [Google's privacy policy](https://policies.google.com/privacy).
+The app shows no banners and no imposed full-screen ads. Free users can choose to watch a rewarded ad served by Google AdMob, for example to earn a streak freeze: no ad plays unless you ask for one. Rewarded ads are currently available on Android only. If they come to iOS, the app will ask your permission (App Tracking Transparency) before any personalized ad; if you decline, only non-personalized ads are requested. Premium users see no ads. See [Google's privacy policy](https://policies.google.com/privacy).
 
 ## 3. Third-party processors
 
