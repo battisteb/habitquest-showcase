@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HabitQuest — Turn your habits into an RPG</title>
 <meta name="description" content="A pixel art habit tracker: complete daily quests, keep your streaks, level up your hero and challenge your friends. On iPhone and Android.">
 <meta property="og:title" content="HabitQuest — Turn your habits into an RPG">
@@ -10,136 +10,260 @@
 <meta property="og:image" content="assets/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#CFE8FF">
+<meta name="theme-color" content="#232c5c">
 <link rel="icon" href="assets/icon.png">
 <link rel="alternate" hreflang="en" href="/"><link rel="alternate" hreflang="fr" href="/fr/"><link rel="alternate" hreflang="ja" href="/ja/"><link rel="alternate" hreflang="ko" href="/ko/"><link rel="alternate" hreflang="zh-Hant" href="/zh/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<script src="assets/site.js" defer></script>
+<link rel="stylesheet" href="assets/v2/site-v2.css">
+<script src="assets/v2/site-v2.js" defer></script>
 <script src="assets/waitlist.js" defer></script>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand pixel" href="./"><img src="assets/icon.png" alt="">HabitQuest</a>
-  <nav class="nav">
-    <a href="#features">Features</a><a href="#faq">FAQ</a><a href="support">Support</a>
-    <a class="nav-play pixel" href="https://habitquest.expo.app">▶ Play</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="assets/v2/pip.png" alt=""><span>HabitQuest</span></a>
+    <nav aria-label="Sections"><a href="#regle">The game</a><a href="#voyage">The Voyage</a><a href="#boss">Bosses</a><a href="#premium">Premium</a></nav>
     <details class="langs"><summary>EN</summary><div>
       <a href="fr/" hreflang="fr" lang="fr">Français</a>
       <a href="ja/" hreflang="ja" lang="ja">日本語</a>
       <a href="ko/" hreflang="ko" lang="ko">한국어</a>
       <a href="zh/" hreflang="zh-Hant" lang="zh-Hant">中文</a>
     </div></details>
-  </nav>
-</div></header>
-
-<main>
-<section class="hero"><div class="wrap">
-  <div>
-    <h1 class="pixel">Turn your habits<br>into <em>quests</em></h1>
-    <p class="lead">Complete your daily quests, keep your streaks alive, earn XP and gold, and level up a pixel hero. Then take on your friends.</p>
-    <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ Play the demo</a><p>Free, right in your browser. Nothing to install, and your hero follows you to the app.</p></div><a class="soft" href="#join">📩 Get told on launch day ↓</a>
+    <a class="btn" href="https://habitquest.expo.app">Play</a>
   </div>
-  <div class="hero-art">
-    <div class="phone"><img src="assets/screens/today.png" alt="" width="390" height="844"></div>
-    <div class="pip" aria-label="Pip">
-      <p class="pip-says">Hi, I’m Pip! I change colour with your day.</p>
-      <div class="pip-sprite"><img src="assets/pip/pip-vert.png" alt="" width="96" height="96"><img src="assets/pip/pip-orange.png" alt="" width="96" height="96"><img src="assets/pip/pip-or.png" alt="" width="96" height="96"><img src="assets/pip/pip-bleu.png" alt="" width="96" height="96"><img src="assets/pip/pip-violet.png" alt="" width="96" height="96"><img src="assets/pip/pip-rose.png" alt="" width="96" height="96"></div>
+  <div class="route" aria-hidden="true">
+    <div class="dots"></div><div class="wake" id="wake"></div>
+    <span class="stop" style="left: 3%"></span><span class="stop" style="left: 26%"></span><span class="stop" style="left: 50%"></span><span class="stop" style="left: 74%"></span><span class="stop" style="left: 97%"></span>
+    <img class="ship" id="ship" src="assets/v2/boat.png" alt="">
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap inner">
+      <div class="card">
+        <h1>Your habits.<br><span>Your adventure.</span></h1>
+        <p class="lead">The habit tracker where every day you show up sails your ship forward.</p>
+        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">Start the adventure</a><small>Free · play right now in your browser</small></div>
+      </div>
     </div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">How it <em>works</em></h2>
-  <div class="steps">
-    <div class="step"><b>Create your hero</b><span>Pick your look and your first quests in under a minute.</span></div>
-    <div class="step"><b>Complete your quests</b><span>Each habit you do earns XP and gold, and keeps your streak alive.</span></div>
-    <div class="step"><b>Level up and play</b><span>Unlock gear, finish daily missions and achievements, beat your friends.</span></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">A look <em>inside</em></h2>
-  <div class="shots">
-    <figure><div class="phone"><img src="assets/screens/today.png" alt="Your quests" loading="lazy" width="390" height="844"></div><figcaption>Your quests</figcaption></figure>
-    <figure><div class="phone"><img src="assets/screens/profile.png" alt="Your hero" loading="lazy" width="390" height="844"></div><figcaption>Your hero</figcaption></figure>
-    <figure><div class="phone"><img src="assets/screens/arena.png" alt="The arena" loading="lazy" width="390" height="844"></div><figcaption>The arena</figcaption></figure>
-    <figure><div class="phone"><img src="assets/screens/stats.png" alt="Your progress" loading="lazy" width="390" height="844"></div><figcaption>Your progress</figcaption></figure>
-  </div>
-</div></section>
-
-<section id="features"><div class="wrap">
-  <h2 class="pixel">Everything that makes <em>habits stick</em></h2>
-  <p class="sub">Every habit becomes a quest. Every day you show up, your hero gets stronger.</p>
-  <div class="grid">
-    <div class="card"><div class="icon">⚔️</div><h3>Daily quests</h3><p>Daily, weekly or a few times a week, with categories and ready-made templates. Tick a quest, earn XP and gold.</p></div>
-    <div class="card"><div class="icon">🔥</div><h3>Streaks that forgive</h3><p>Keep your streak going day after day. A weekly streak freeze and a Pause for exams, holidays or illness: frozen, not lost.</p></div>
-    <div class="card"><div class="icon">🧙</div><h3>A hero that grows</h3><p>Six ranks from Novice to Legend. Dress your 32×32 pixel hero with hats, outfits, accessories and themes from the shop.</p></div>
-    <div class="card"><div class="icon">🤺</div><h3>Duels and challenges</h3><p>Turn-based duels against your friends' heroes, and 1v1 challenges with gold at stake: the most consistent wins.</p></div>
-    <div class="card"><div class="icon">🏟️</div><h3>Arena leagues</h3><p>One fight a day against a player of your league. Climb six leagues, season after season.</p></div>
-    <div class="card"><div class="icon">🤝</div><h3>Co-op challenges</h3><p>Team up with friends on a shared goal and earn bonus XP together.</p></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">Free to play. <em>Premium</em> if you want more.</h2>
-  <div class="premium">
-    <div class="card"><h3>Free</h3><ul><li>All quests, streaks and your hero</li><li>Daily missions and 23 achievements</li><li>Duels, challenges, co-op and arena</li><li>The basic shop catalog</li></ul></div>
-    <div class="card"><h3>Premium (optional subscription)</h3><ul><li>No ads</li><li>More streak freeze tokens</li><li>A dragon companion that grows with your streak, and an item every month</li><li>Full stats history</li><li>The full shop with exclusives</li><li>Priority support</li></ul></div>
-  </div>
-</div></section>
-
-<section id="beta"><div class="wrap"><div class="beta">
-  <div>
-    <span class="badge pixel">ANDROID BETA</span>
-    <h2 class="pixel">Become an <em>Android tester</em></h2>
-    <p>Help us launch on Google Play: Google asks for 12 testers for 14 days. Play before everyone else, for free, and help shape the game.</p>
-    <ol><li>Join the testers group with the Google account of your phone.</li><li>Open the Google Play test page with the same account and tap “Become a tester”.</li><li>Install HabitQuest and open it from time to time for 14 days.</li></ol>
-  </div>
-  <div class="beta-cta">
-    <a class="play pixel" href="https://groups.google.com/g/habitquest-app-testers" target="_blank" rel="noopener">🧪 1. Join the testers group</a>
-    <a class="play pixel" href="https://play.google.com/apps/testing/com.battiste.habitquest" target="_blank" rel="noopener">▶ 2. Become a tester on Google Play</a>
-    <p>Free. Google Groups only uses your address to let you in.</p>
-  </div>
-</div></div></section>
-
-<section id="faq"><div class="wrap">
-  <h2 class="pixel">Questions</h2>
-  <details><summary>Is HabitQuest free?</summary><p>Yes. The whole game is free; Premium is an optional subscription that removes ads and adds extras. You can cancel it at any time in your App Store or Google Play settings.</p></details>
-  <details><summary>Which devices?</summary><p>iPhone and Android phones, and any web browser. Your progress is saved to your account and follows you everywhere.</p></details>
-  <details><summary>Which languages?</summary><p>English, French, Japanese, Korean and Traditional Chinese (Taiwan).</p></details>
-  <details><summary>What about my data?</summary><p>Your habits are private. We use no analytics SDK and never sell your data. Read the <a href="privacy-policy">Privacy Policy</a>.</p></details>
-  <details><summary>I need help</summary><p>Write to us from Settings → Support in the app, or see the <a href="support">Support page</a>.</p></details>
-</div></section>
-
-<section id="join"><div class="wrap"><div class="cta">
-  <h2 class="pixel">Your adventure starts <em>today</em></h2>
-  <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ Play the demo</a><p>Free, right in your browser. Nothing to install, and your hero follows you to the app.</p></div><form class="waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="en" novalidate>
-    <h3 class="pixel">Be told on launch day</h3>
-    <div class="waitlist-row">
-      <label class="sr" for="wl-email">Your e-mail</label>
-      <input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="Your e-mail">
-      <button type="submit">Notify me</button>
+    <div class="voyager" aria-hidden="true">
+      <div class="quest" id="quest" data-quests="[[&quot;Read 20 pages&quot;,15],[&quot;Meditate 10 min&quot;,12],[&quot;Run 5 km&quot;,20]]">
+        <span class="box"><svg width="14" height="14" viewBox="0 0 7 7" aria-hidden="true"><path d="M6 1h1v1H6zM5 2h1v1H5zM4 3h1v1H4zM0 3h1v1H0zM1 4h1v1H1zM3 4h1v1H3zM2 5h1v1H2z" fill="#ffffff"></path></svg></span><span class="name" id="qname">Read 20 pages</span> <span class="gain" id="qgain">+15 XP</span>
+        <span class="xpfloat" id="xpf">+15 XP</span>
+      </div>
+      <img src="assets/v2/boat.png" alt="">
     </div>
-    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <label class="waitlist-consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>I agree to receive one e-mail when HabitQuest is available on the App Store and Google Play. No spam; unsubscribe anytime. <a href="privacy-policy">Privacy policy</a></span></label>
-    <p class="waitlist-msg" role="status" data-ok="You are on the list! We will write to you on launch day." data-error="That did not work. Check your e-mail and try again."></p>
-  </form>
-</div></div></section>
+  </section>
+
+  <div class="trust">
+    <ul class="wrap">
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>Free forever</b><span>No card needed to start</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>Play right now</b><span>On the web, soon on Google Play</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>In 5 languages</b><span>English, French, Japanese, Korean, Chinese</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>Your data is yours</b><span>Delete your account at any time</span></div></li>
+    </ul>
+  </div>
+
+  <section class="rules wrap" id="regle">
+    <p class="kicker">HOW IT WORKS</p>
+    <h2>Your real habits are your quests</h2>
+    <div class="steps">
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="assets/v2/en/today.jpg" alt="The quests of the day: three habits and a to-do list" width="520" height="1125"></div>
+        <span class="num">1</span><h3>Pick your habits</h3><p>Read, run, sleep earlier: whatever you want to stick to. Plus a to-do list for one-off tasks.</p>
+      </div>
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="assets/v2/en/world.jpg" alt="The world map, half in the fog" width="520" height="1125" loading="lazy"></div>
+        <span class="num">2</span><h3>Tick them, your ship sails on</h3><p>XP, gold, streaks: every day you show up brings the next island closer.</p>
+      </div>
+      <div class="step rv">
+        <div class="bosscard" id="bosscard" data-unit="HP">
+          <span class="tag">BOSS OF THE WEEK</span>
+          <span class="bname">The Snooze Golem</span>
+          <div class="hp"><i id="hpbar"></i></div>
+          <span class="hptext" id="hptext">147 / 147 HP</span>
+          <div class="sprite" id="bsprite"><img src="assets/v2/boss-snooze_golem.png" alt="The Snooze Golem, a sleeping stone golem with an alarm clock in its chest"><span class="dmg" id="dmg">−10</span></div>
+          <span class="hint">Every quest you complete this week hits it for 10.</span>
+        </div>
+        <span class="num">3</span><h3>Beat your bad habits</h3><p>Every week, one of them takes shape and blocks the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pip wrap">
+    <div class="row rv">
+      <img src="assets/v2/pip.png" alt="Pip">
+      <div class="bubble"><b>PIP</b><p>“Hi, I’m Pip! I change colour with your day and I’m with you every day. On rough days, we freeze your streak. No guilt.”</p></div>
+    </div>
+  </section>
+
+  <div class="band" id="band" aria-hidden="true">
+    <div class="sailer" id="sailer"><span class="flag">Heading for the next island</span><img src="assets/v2/boat.png" alt=""></div>
+  </div>
+  <section class="world" id="voyage">
+    <div class="wrap">
+      <p class="kicker">PIP’S VOYAGE</p>
+      <h2>A world that opens up at your pace</h2>
+      <div class="figs">
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="assets/v2/en/island.jpg" alt="An island: the hero and Pip on the path of stages" width="520" height="1125" loading="lazy"></div><figcaption><b>12 islands per world</b><span>Each with its stages, its people and a chest.</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="assets/v2/en/chapter.jpg" alt="A page of the book: the hero and Pip at the top of an island, at sunset" width="520" height="1125" loading="lazy"></div><figcaption><b>The book of your voyage</b><span>One page for every island you reach.</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="assets/v2/en/bottle.jpg" alt="A message in a bottle" width="520" height="1125" loading="lazy"></div><figcaption><b>Messages in bottles</b><span>Notes that tell the story of the world.</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="assets/v2/en/braise.jpg" alt="The hero, Pip and Braise, the little dragon, on their island" width="520" height="1125" loading="lazy"></div><figcaption><b>Braise grows with you</b><span>From egg to Legend, with your streak.</span><br><span class="prem">WITH PREMIUM</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div id="boss">
+    <div class="edge"></div>
+    <div class="beam"></div>
+    <section class="wood wanted">
+      <div class="wrap">
+        <p class="kicker">WANTED</p>
+        <h2>Your bad habits are wanted</h2>
+        <p class="sub">Every week, one of them blocks your way. Beat it, collect the bounty.</p>
+        <div class="posters">
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">BEATEN OR ALIVE</span><span class="pf"><img src="assets/v2/boss-doomscroll_kraken.png" alt=""></span><span class="pn">The Doomscroll Kraken</span><span class="pw">for endless scrolling</span><span class="pb">BOUNTY  50 XP  25 GOLD</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">BEATEN OR ALIVE</span><span class="pf"><img src="assets/v2/boss-notif_siren.png" alt=""></span><span class="pn">The Notification Siren</span><span class="pw">for every “ding”</span><span class="pb">BOUNTY  50 XP  25 GOLD</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">BEATEN OR ALIVE</span><span class="pf"><img src="assets/v2/boss-later_specter.png" alt=""></span><span class="pn">The Later Specter</span><span class="pw">for “I’ll do it tomorrow”</span><span class="pb">BOUNTY  50 XP  25 GOLD</span></div>
+        </div>
+        <div class="lurk">
+          <p>And three more lurk on the map…</p>
+          <div class="shadows">
+            <button class="shadow" type="button"><img src="assets/v2/boss-snooze_golem.png" alt="Snooze Golem"><span data-name="Snooze Golem"></span></button>
+            <button class="shadow" type="button"><img src="assets/v2/boss-couch_troll.png" alt="Couch Troll"><span data-name="Couch Troll"></span></button>
+            <button class="shadow" type="button"><img src="assets/v2/boss-night_owl.png" alt="Night Owl"><span data-name="Night Owl"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="beam"></div>
+    <div class="edge" style="transform: scaleY(-1)"></div>
+  </div>
+
+  <section class="crew">
+    <div class="wrap head">
+      <p class="kicker">CREW</p>
+      <h2>Bring your crew aboard</h2>
+      <p>Alone you move forward. Together you reach the end of the world.</p>
+    </div>
+    <div class="scene">
+      <img src="assets/v2/crew.png" alt="Four heroes on the deck of the ship">
+      <div class="invite"><div><span class="big">+7 days</span><span>Invite a friend: <b>you each get a week of Premium</b>.</span><a class="btn" href="https://habitquest.expo.app">Invite</a></div></div>
+    </div>
+  </section>
+
+  <section class="duel" id="duel">
+    <div class="wrap">
+      <div class="art rv"><div class="frame">
+        <img src="assets/v2/duel.png" alt="Two heroes in a duel">
+        <span class="lbl" style="left: 19%">YOU · 12d</span><span class="lbl" style="left: 58%">LEA · 9d</span>
+        <span class="bolt" aria-hidden="true">−12</span>
+      </div></div>
+      <div class="txt rv">
+        <p class="kicker">DUELS AND LEAGUES</p>
+        <h2>Consistency is your weapon</h2>
+        <p>Challenge a friend: your heroes fight turn by turn, and the more you keep your habits, the harder you hit. Then climb six leagues, from Bronze to Master.</p>
+        <div class="leagues" id="leagues"><span>Bronze</span><span>Silver</span><span>Gold</span><span>Platinum</span><span>Diamond</span><span>Master</span></div>
+        <a class="btn red" href="https://habitquest.expo.app">Challenge a friend</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium" id="premium">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">FREE FOREVER · HEROIC IF YOU WANT</p>
+        <h2>Open the Premium chest</h2>
+        <p class="lead">Your hero, your style: the full shop catalog, an exclusive item every month, and Braise, the dragon that grows with your streak.</p>
+      </div>
+      <div class="vault" id="vault">
+        <div class="fan">
+          <div class="card"><img src="assets/v2/look-b.png" alt="The hero with dragon horns and the shadow cloak"><span class="r-leg">LEGENDARY · Dragon Horns</span></div>
+          <div class="card"><img src="assets/v2/look-a.png" alt="The hero with the crown of champions and royal vestments"><span class="r-epic">EPIC · Crown of Champions</span></div>
+          <div class="card"><img src="assets/v2/look-c.png" alt="The hero with the halo, the golden plate and wings"><span class="r-epic">EPIC · Holy Halo</span></div>
+        </div>
+        <img class="chest" src="assets/v2/chest.png" alt="Braise comes out of an open chest">
+      </div>
+      <div class="deal">
+        <div class="loot">
+          <div class="item r-leg"><i>B</i><div><b>Braise</b><span>The dragon that grows with your streak, from egg to Legend.</span></div></div>
+          <div class="item r-epic"><i>★</i><div><b>Item of the month</b><span>An exclusive cosmetic every month.</span></div></div>
+          <div class="item r-rare"><i>♛</i><div><b>Full catalog</b><span>Hats, outfits, items, backdrops and themes, exclusives included.</span></div></div>
+          <div class="item r-unc"><i>✕</i><div><b>No ads</b><span>Nothing between you and your quests.</span></div></div>
+          <div class="item r-unc"><i>❄</i><div><b>Streak freezes</b><span>3 tokens at half price on top of the weekly freeze.</span></div></div>
+        </div>
+        <div class="counter" id="counter" data-labels="{&quot;year&quot;:[&quot;Try 14 days free&quot;,&quot;Nothing to pay for 14 days&quot;,&quot;Cancel any time before the trial ends&quot;],&quot;month&quot;:[&quot;Go Premium · $4.99 / month&quot;,&quot;No commitment&quot;,&quot;Cancel any time&quot;],&quot;life&quot;:[&quot;Unlock for life · $59.99&quot;,&quot;Paid once&quot;,&quot;All of Premium, forever&quot;]}">
+          <p class="counter-title">Choose your plan</p>
+          <div class="plans2" role="radiogroup" aria-label="Premium plan">
+            <label class="plan2"><input type="radio" name="plan" value="year" checked><span class="pname">Yearly</span><span class="pprice">$29.99</span><span class="pnote">$2.50 / month</span><span class="pbadge">14 DAYS FREE · −50 %</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="month"><span class="pname">Monthly</span><span class="pprice">$4.99</span><span class="pnote">per month, no commitment</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="life"><span class="pname">Lifetime</span><span class="pprice">$59.99</span><span class="pnote">paid once</span></label>
+          </div>
+          <a class="btn red go" id="gobtn" href="https://habitquest.expo.app">Try 14 days free</a>
+          <ul class="sure" id="sure"><li>Nothing to pay for 14 days</li><li>Cancel any time before the trial ends</li></ul>
+          <p class="pricenote">Prices in US dollars: the store shows the price of your country.</p>
+        </div>
+      </div>
+      <p class="free">Habits, tasks, streaks, the Voyage, bosses and friends stay free, forever.</p>
+    </div>
+  </section>
+
+  <section class="ports" id="sortie">
+    <div class="wrap">
+      <div class="pass" id="pass">
+        <div class="map">
+          <img src="assets/v2/escales.png" alt="The route of ports: the web, Google Play, then the App Store in the mist">
+          <span class="mini"><img src="assets/v2/boat.png" alt=""></span>
+          <span class="tag" style="left: 7%">WEB · YOU ARE HERE</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · MIST</span>
+        </div>
+        <div class="body">
+          <div class="left">
+            <div class="meta"><span>BOARDING PASS</span><span>HABITQUEST · WORLD I</span></div>
+            <div class="legs">
+              <div><small>FROM</small><b>WEB</b></div>
+              <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
+              <div><small>NEXT PORT</small><b>GOOGLE PLAY</b></div>
+            </div>
+            <span class="stamp">SOON</span>
+            <p class="note">The date lands as soon as Google opens production. Next port after that: the App Store, once Apple approves the iPhone app.</p>
+          </div>
+          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="en" novalidate>
+            <span class="title">Save your seat on board<small>We tell you at every new port.</small></span>
+            <div class="field"><label for="wl-email">YOUR E-MAIL</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="Your e-mail"></div>
+            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>I agree to receive one e-mail when HabitQuest is available on the App Store and Google Play. No spam; unsubscribe anytime. <a href="privacy-policy">Privacy policy</a></span></label>
+            <button class="btn" type="submit">Board <span class="arrow">▶</span></button>
+            <p class="waitlist-msg" role="status" data-ok="You are on the list! We will write to you on launch day." data-error="That did not work. Check your e-mail and try again."></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details><summary>Is HabitQuest free?</summary><p>Yes. The whole game is free; Premium is an optional subscription that removes ads and adds extras. You can cancel it at any time in your App Store or Google Play settings.</p></details>
+      <details><summary>Which devices?</summary><p>iPhone and Android phones, and any web browser. Your progress is saved to your account and follows you everywhere.</p></details>
+      <details><summary>Which languages?</summary><p>English, French, Japanese, Korean and Traditional Chinese (Taiwan).</p></details>
+      <details><summary>What about my data?</summary><p>Your habits are private. We use no analytics SDK and never sell your data. Read the <a href="privacy-policy">Privacy Policy</a>.</p></details>
+      <details><summary>I need help</summary><p>Write to us from Settings → Support in the app, or see the <a href="support">Support page</a>.</p></details>
+    </div>
+  </section>
 </main>
 
-<footer><div class="wrap">
-  <nav>
-    <a href="support">Support</a>
-    <a href="privacy-policy">Privacy Policy</a>
-    <a href="terms">Terms of Use</a>
-    <a href="mailto:habitquest.application@gmail.com">Contact</a>
+<footer>
+  <div class="wrap">
+    <img src="assets/v2/pip.png" alt="">
+    <a href="#faq">Questions</a><a href="support">Support</a><a href="privacy-policy">Privacy Policy</a><a href="terms">Terms of Use</a><a href="mailto:habitquest.application@gmail.com">Contact</a>
     <a href="https://www.instagram.com/habitquest.application/">Instagram</a>
     <a href="https://www.tiktok.com/@habitquest.en">TikTok</a>
     <a href="https://www.youtube.com/@habitquest.en.application">YouTube</a>
-  </nav>
-  <span>© 2026 HabitQuest. Made with ⚔️ and pixel art.</span>
-</div></footer>
+    <span>© 2026 HabitQuest. Made with ⚔️ and pixel art.</span>
+  </div>
+</footer>
 </body>
 </html>

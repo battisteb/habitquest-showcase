@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HabitQuest — 把習慣變成RPG</title>
 <meta name="description" content="像素風習慣養成App：完成每日任務、延續連續紀錄、培養你的英雄，還能和好友一較高下。支援 iPhone 與 Android。">
 <meta property="og:title" content="HabitQuest — 把習慣變成RPG">
@@ -10,138 +10,260 @@
 <meta property="og:image" content="../assets/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#CFE8FF">
+<meta name="theme-color" content="#232c5c">
 <link rel="icon" href="../assets/icon.png">
 <link rel="alternate" hreflang="en" href="/"><link rel="alternate" hreflang="fr" href="/fr/"><link rel="alternate" hreflang="ja" href="/ja/"><link rel="alternate" hreflang="ko" href="/ko/"><link rel="alternate" hreflang="zh-Hant" href="/zh/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
-<script src="../assets/site.js" defer></script>
+<link rel="stylesheet" href="../assets/v2/site-v2.css">
+<script src="../assets/v2/site-v2.js" defer></script>
 <script src="../assets/waitlist.js" defer></script>
-<style>@font-face { font-family: "FusionPixelZh"; src: url("../assets/fonts/fusion-pixel-zh.woff2") format("woff2"); font-display: swap; }
-.pixel, .card h3, .step b, .shots figcaption, .waitlist h3, .waitlist button, .store.soon::before { font-family: "Jersey 10", "FusionPixelZh", monospace !important; }</style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand pixel" href="./"><img src="../assets/icon.png" alt="">HabitQuest</a>
-  <nav class="nav">
-    <a href="#features">功能</a><a href="#faq">常見問題</a><a href="../support">客服</a>
-    <a class="nav-play pixel" href="https://habitquest.expo.app">▶ 開玩</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="../assets/v2/pip.png" alt=""><span>HabitQuest</span></a>
+    <nav aria-label="Sections"><a href="#regle">玩法</a><a href="#voyage">航海</a><a href="#boss">魔王</a><a href="#premium">進階版</a></nav>
     <details class="langs"><summary>中文</summary><div>
       <a href="../" hreflang="en" lang="en">English</a>
       <a href="../fr/" hreflang="fr" lang="fr">Français</a>
       <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
       <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
     </div></details>
-  </nav>
-</div></header>
-
-<main>
-<section class="hero"><div class="wrap">
-  <div>
-    <h1 class="pixel">把習慣<br>變成<em>任務</em></h1>
-    <p class="lead">完成每日任務、延續連續紀錄，賺取 XP 和金幣，培養你的像素英雄。再向好友發起挑戰！</p>
-    <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ 立即試玩</a><p>免費，直接在瀏覽器裡玩，不用安裝。你的英雄之後也能帶到 App 裡。</p></div><a class="soft" href="#join">📩 上架當天通知我 ↓</a>
+    <a class="btn" href="https://habitquest.expo.app">開始玩</a>
   </div>
-  <div class="hero-art">
-    <div class="phone"><img src="../assets/screens/today.png" alt="" width="390" height="844"></div>
-    <div class="pip" aria-label="Pip">
-      <p class="pip-says">你好，我是皮普！我會隨著你一天的狀態變換顏色喔。</p>
-      <div class="pip-sprite"><img src="../assets/pip/pip-vert.png" alt="" width="96" height="96"><img src="../assets/pip/pip-orange.png" alt="" width="96" height="96"><img src="../assets/pip/pip-or.png" alt="" width="96" height="96"><img src="../assets/pip/pip-bleu.png" alt="" width="96" height="96"><img src="../assets/pip/pip-violet.png" alt="" width="96" height="96"><img src="../assets/pip/pip-rose.png" alt="" width="96" height="96"></div>
+  <div class="route" aria-hidden="true">
+    <div class="dots"></div><div class="wake" id="wake"></div>
+    <span class="stop" style="left: 3%"></span><span class="stop" style="left: 26%"></span><span class="stop" style="left: 50%"></span><span class="stop" style="left: 74%"></span><span class="stop" style="left: 97%"></span>
+    <img class="ship" id="ship" src="../assets/v2/boat.png" alt="">
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap inner">
+      <div class="card">
+        <h1>你的習慣，<br><span>就是你的冒險。</span></h1>
+        <p class="lead">每堅持一天，你的船就前進一步的習慣追蹤器。</p>
+        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">開始冒險</a><small>免費 · 在瀏覽器裡馬上玩</small></div>
+      </div>
     </div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel"><em>怎麼</em>玩</h2>
-  <div class="steps">
-    <div class="step"><b>創造英雄</b><span>一分鐘內選好外觀和第一個任務。</span></div>
-    <div class="step"><b>完成任務</b><span>每完成一個習慣就得到 XP 和金幣，連續紀錄也會延續。</span></div>
-    <div class="step"><b>升級、玩樂</b><span>解鎖裝備、完成每日目標和成就，打敗你的好友。</span></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">看看 App <em>裡面</em></h2>
-  <div class="shots">
-    <figure><div class="phone"><img src="../assets/screens/today.png" alt="任務" loading="lazy" width="390" height="844"></div><figcaption>任務</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/profile.png" alt="英雄" loading="lazy" width="390" height="844"></div><figcaption>英雄</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/arena.png" alt="競技場" loading="lazy" width="390" height="844"></div><figcaption>競技場</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/stats.png" alt="成長紀錄" loading="lazy" width="390" height="844"></div><figcaption>成長紀錄</figcaption></figure>
-  </div>
-</div></section>
-
-<section id="features"><div class="wrap">
-  <h2 class="pixel">讓習慣<em>持續下去</em>的一切</h2>
-  <p class="sub">每個習慣都是一個任務。堅持越多天，英雄就越強。</p>
-  <div class="grid">
-    <div class="card"><div class="icon">⚔️</div><h3>每日任務</h3><p>每天、指定星期幾或一週幾次，自由設定。附分類與範本。完成就能獲得 XP 和金幣。</p></div>
-    <div class="card"><div class="icon">🔥</div><h3>溫柔的連續紀錄</h3><p>不小心忘記的那天，每週一次的凍結會自動幫你補上。中斷也沒有懲罰：回來的那天 XP 加倍，48 小時內還能修復。</p></div>
-    <div class="card"><div class="icon">🧙</div><h3>會成長的英雄</h3><p>從見習生到傳說共 6 個階級。用商店的帽子、服裝、配件和主題，打扮你的 32×32 像素英雄。</p></div>
-    <div class="card"><div class="icon">🤺</div><h3>對戰與挑戰</h3><p>和好友的英雄進行回合制對戰。在一對一挑戰中，堅持最久的人獲勝。</p></div>
-    <div class="card"><div class="icon">🏟️</div><h3>競技場</h3><p>每天一次，和同聯盟的玩家對戰。每個賽季挑戰攀上 6 個聯盟。</p></div>
-    <div class="card"><div class="icon">👹</div><h3>本週頭目</h3><p>每週，壞習慣會變成怪物。每完成一個任務就對它造成傷害，在週日前打倒它吧。</p></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">基本免費。想玩更多就選<em>進階版</em></h2>
-  <div class="premium">
-    <div class="card"><h3>免費</h3><ul><li>所有任務、連續紀錄、英雄</li><li>每日目標與 23 個成就</li><li>對戰、挑戰、合作挑戰、競技場</li><li>商店基本商品</li></ul></div>
-    <div class="card"><h3>進階版（自由選擇）</h3><ul><li>無廣告</li><li>更多連續紀錄凍結道具</li><li>隨連續紀錄長大的龍夥伴，與每月限定道具</li><li>完整期間的統計</li><li>商店全部商品與限定品</li><li>優先客服（48 小時內）</li></ul></div>
-  </div>
-</div></section>
-
-<section id="beta"><div class="wrap"><div class="beta">
-  <div>
-    <span class="badge pixel">ANDROID 測試版</span>
-    <h2 class="pixel">成為 <em>Android 測試員</em></h2>
-    <p>上架 Google Play 前，Google 需要 12 位測試員連續測試 14 天。搶先免費遊玩，一起打造這款遊戲。</p>
-    <ol><li>用手機上的 Google 帳號加入測試員群組。</li><li>用同一個帳號開啟 Google Play 測試頁面，點選「成為測試人員」。</li><li>安裝 HabitQuest，並在 14 天內不時打開它。</li></ol>
-  </div>
-  <div class="beta-cta">
-    <a class="play pixel" href="https://groups.google.com/g/habitquest-app-testers" target="_blank" rel="noopener">🧪 1. 加入測試員群組</a>
-    <a class="play pixel" href="https://play.google.com/apps/testing/com.battiste.habitquest" target="_blank" rel="noopener">▶ 2. 在 Google Play 成為測試員</a>
-    <p>免費。你的電子郵件只會用於加入 Google 網上論壇。</p>
-  </div>
-</div></div></section>
-
-<section id="faq"><div class="wrap">
-  <h2 class="pixel">常見問題</h2>
-  <details><summary>HabitQuest 免費嗎？</summary><p>是的，整個遊戲都可以免費玩。進階版是自由選擇的方案，可以移除廣告並增加福利，隨時都能在 App Store 或 Google Play 的設定中取消。</p></details>
-  <details><summary>可以在哪些裝置上使用？</summary><p>iPhone、Android 手機，以及網頁瀏覽器。進度會存在帳號裡，在哪裡都能接著玩。</p></details>
-  <details><summary>支援哪些語言？</summary><p>繁體中文、英文、法文、日文和韓文。</p></details>
-  <details><summary>我的資料安全嗎？</summary><p>你的習慣是私密的。我們不使用分析工具，也絕不販售資料。請參閱<a href="../privacy-policy">隱私權政策</a>（英文）。</p></details>
-  <details><summary>遇到問題怎麼辦？</summary><p>在 App 的「設定 → 客服」聯絡我們，或查看<a href="../support">客服頁面</a>。</p></details>
-</div></section>
-
-<section id="join"><div class="wrap"><div class="cta">
-  <h2 class="pixel">冒險從<em>今天</em>開始</h2>
-  <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ 立即試玩</a><p>免費，直接在瀏覽器裡玩，不用安裝。你的英雄之後也能帶到 App 裡。</p></div><form class="waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="zh" novalidate>
-    <h3 class="pixel">上架時通知我</h3>
-    <div class="waitlist-row">
-      <label class="sr" for="wl-email">電子郵件</label>
-      <input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="電子郵件">
-      <button type="submit">通知我</button>
+    <div class="voyager" aria-hidden="true">
+      <div class="quest" id="quest" data-quests="[[&quot;讀 20 頁&quot;,15],[&quot;冥想 10 分鐘&quot;,12],[&quot;跑 5 公里&quot;,20]]">
+        <span class="box"><svg width="14" height="14" viewBox="0 0 7 7" aria-hidden="true"><path d="M6 1h1v1H6zM5 2h1v1H5zM4 3h1v1H4zM0 3h1v1H0zM1 4h1v1H1zM3 4h1v1H3zM2 5h1v1H2z" fill="#ffffff"></path></svg></span><span class="name" id="qname">讀 20 頁</span> <span class="gain" id="qgain">+15 XP</span>
+        <span class="xpfloat" id="xpf">+15 XP</span>
+      </div>
+      <img src="../assets/v2/boat.png" alt="">
     </div>
-    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <label class="waitlist-consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>我同意在 HabitQuest 於 App Store 和 Google Play 上架時，收到一封通知信。不會寄垃圾信，隨時可以取消。 <a href="../privacy-policy">隱私權政策</a></span></label>
-    <p class="waitlist-msg" role="status" data-ok="登記成功！上架那天會寄信通知你。" data-error="沒有成功，請確認電子郵件後再試一次。"></p>
-  </form>
-</div></div></section>
+  </section>
+
+  <div class="trust">
+    <ul class="wrap">
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>永久免費</b><span>開始時不需要信用卡</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>現在就能玩</b><span>網頁版已上線，即將登上 Google Play</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>5 種語言</b><span>繁體中文、英文、法文、日文、韓文</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>資料屬於你</b><span>隨時可以刪除帳號</span></div></li>
+    </ul>
+  </div>
+
+  <section class="rules wrap" id="regle">
+    <p class="kicker">遊戲規則</p>
+    <h2>真實的習慣，就是你的任務</h2>
+    <div class="steps">
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="../assets/v2/zh/today.jpg" alt="今日任務畫面：三個習慣和待辦清單" width="520" height="1125"></div>
+        <span class="num">1</span><h3>選擇你的習慣</h3><p>閱讀、跑步、早點睡：想堅持什麼都可以。一次性的事放進待辦清單。</p>
+      </div>
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="../assets/v2/zh/world.jpg" alt="一半籠罩在霧裡的世界地圖" width="520" height="1125" loading="lazy"></div>
+        <span class="num">2</span><h3>完成它們，船就前進</h3><p>XP、金幣、連續紀錄：每堅持一天，就更接近下一座島。</p>
+      </div>
+      <div class="step rv">
+        <div class="bosscard" id="bosscard" data-unit="HP">
+          <span class="tag">本週魔王</span>
+          <span class="bname">貪睡魔像</span>
+          <div class="hp"><i id="hpbar"></i></div>
+          <span class="hptext" id="hptext">147 / 147 HP</span>
+          <div class="sprite" id="bsprite"><img src="../assets/v2/boss-snooze_golem.png" alt="貪睡魔像，胸口嵌著鬧鐘、正在打瞌睡的石頭魔像"><span class="dmg" id="dmg">−10</span></div>
+          <span class="hint">本週每完成一個任務，就對它造成 10 點傷害。</span>
+        </div>
+        <span class="num">3</span><h3>打敗你的壞習慣</h3><p>每週都有一個壞習慣現形，擋在路上。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pip wrap">
+    <div class="row rv">
+      <img src="../assets/v2/pip.png" alt="Pip">
+      <div class="bubble"><b>PIP</b><p>「嗨，我是 Pip！我會隨著你的一天變換顏色，每天陪著你。不順的日子，我們幫你凍結連續紀錄。不必自責。」</p></div>
+    </div>
+  </section>
+
+  <div class="band" id="band" aria-hidden="true">
+    <div class="sailer" id="sailer"><span class="flag">前往下一座島</span><img src="../assets/v2/boat.png" alt=""></div>
+  </div>
+  <section class="world" id="voyage">
+    <div class="wrap">
+      <p class="kicker">Pip 的航海</p>
+      <h2>依你的步調展開的世界</h2>
+      <div class="figs">
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/zh/island.jpg" alt="一座島：主角和 Pip 走在關卡小路上" width="520" height="1125" loading="lazy"></div><figcaption><b>每個世界 12 座島</b><span>每座島都有關卡、居民和寶箱。</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/zh/chapter.jpg" alt="書中的一頁：夕陽下，主角和 Pip 站在島的頂端" width="520" height="1125" loading="lazy"></div><figcaption><b>你的航海之書</b><span>每抵達一座島，就多一頁。</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/zh/bottle.jpg" alt="海上漂來的瓶子和訊息" width="520" height="1125" loading="lazy"></div><figcaption><b>海上漂來的瓶子</b><span>訴說這個世界故事的訊息。</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/zh/braise.jpg" alt="島上的主角、Pip 和小龍布雷茲" width="520" height="1125" loading="lazy"></div><figcaption><b>布雷茲和你一起成長</b><span>隨著連續紀錄，從蛋長成傳說。</span><br><span class="prem">進階版</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div id="boss">
+    <div class="edge"></div>
+    <div class="beam"></div>
+    <section class="wood wanted">
+      <div class="wrap">
+        <p class="kicker">懸賞通緝</p>
+        <h2>你的壞習慣正被通緝</h2>
+        <p class="sub">每週都有一個擋在你的路上。打敗它，領取賞金。</p>
+        <div class="posters">
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">生死不論</span><span class="pf"><img src="../assets/v2/boss-doomscroll_kraken.png" alt=""></span><span class="pn">無盡滑動海怪</span><span class="pw">罪名：滑個不停</span><span class="pb">賞金  50 XP  25 金幣</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">生死不論</span><span class="pf"><img src="../assets/v2/boss-notif_siren.png" alt=""></span><span class="pn">通知海妖</span><span class="pw">罪名：每一聲「叮」</span><span class="pb">賞金  50 XP  25 金幣</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">生死不論</span><span class="pf"><img src="../assets/v2/boss-later_specter.png" alt=""></span><span class="pn">晚點再說幽靈</span><span class="pw">罪名：「明天再做」</span><span class="pb">賞金  50 XP  25 金幣</span></div>
+        </div>
+        <div class="lurk">
+          <p>還有三個在地圖上徘徊…</p>
+          <div class="shadows">
+            <button class="shadow" type="button"><img src="../assets/v2/boss-snooze_golem.png" alt="貪睡魔像"><span data-name="貪睡魔像"></span></button>
+            <button class="shadow" type="button"><img src="../assets/v2/boss-couch_troll.png" alt="沙發巨魔"><span data-name="沙發巨魔"></span></button>
+            <button class="shadow" type="button"><img src="../assets/v2/boss-night_owl.png" alt="熬夜貓頭鷹"><span data-name="熬夜貓頭鷹"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="beam"></div>
+    <div class="edge" style="transform: scaleY(-1)"></div>
+  </div>
+
+  <section class="crew">
+    <div class="wrap head">
+      <p class="kicker">一起出航</p>
+      <h2>邀請夥伴上船</h2>
+      <p>一個人也能前進。一起走，就能到世界盡頭。</p>
+    </div>
+    <div class="scene">
+      <img src="../assets/v2/crew.png" alt="船甲板上的四位主角">
+      <div class="invite"><div><span class="big">+7 天</span><span>邀請朋友：<b>兩人都獲得一週進階版</b>。</span><a class="btn" href="https://habitquest.expo.app">邀請</a></div></div>
+    </div>
+  </section>
+
+  <section class="duel" id="duel">
+    <div class="wrap">
+      <div class="art rv"><div class="frame">
+        <img src="../assets/v2/duel.png" alt="對決中的兩位主角">
+        <span class="lbl" style="left: 19%">你 · 12 天</span><span class="lbl" style="left: 58%">莉亞 · 9 天</span>
+        <span class="bolt" aria-hidden="true">−12</span>
+      </div></div>
+      <div class="txt rv">
+        <p class="kicker">對決與聯賽</p>
+        <h2>堅持就是你的武器</h2>
+        <p>挑戰朋友：英雄們回合制對戰，習慣保持得越好，攻擊就越強。再從青銅一路爬到大師，共六個聯賽。</p>
+        <div class="leagues" id="leagues"><span>青銅</span><span>白銀</span><span>黃金</span><span>白金</span><span>鑽石</span><span>大師</span></div>
+        <a class="btn red" href="https://habitquest.expo.app">挑戰朋友</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium" id="premium">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">永久免費 · 想要的話更英勇</p>
+        <h2>打開進階版寶箱</h2>
+        <p class="lead">你的英雄，你的風格：商店完整目錄、每月一件專屬道具，還有隨連續紀錄成長的小龍布雷茲。</p>
+      </div>
+      <div class="vault" id="vault">
+        <div class="fan">
+          <div class="card"><img src="../assets/v2/look-b.png" alt="戴著龍角、披著暗影斗篷的主角"><span class="r-leg">傳說 · 龍角</span></div>
+          <div class="card"><img src="../assets/v2/look-a.png" alt="戴著冠軍之冠、穿著皇家服飾的主角"><span class="r-epic">史詩 · 冠軍之冠</span></div>
+          <div class="card"><img src="../assets/v2/look-c.png" alt="頭頂光環、身穿黃金鎧甲、背著翅膀的主角"><span class="r-epic">史詩 · 神聖光環</span></div>
+        </div>
+        <img class="chest" src="../assets/v2/chest.png" alt="布雷茲從打開的寶箱裡冒出來">
+      </div>
+      <div class="deal">
+        <div class="loot">
+          <div class="item r-leg"><i>B</i><div><b>布雷茲</b><span>隨連續紀錄從蛋長成傳說的小龍。</span></div></div>
+          <div class="item r-epic"><i>★</i><div><b>每月道具</b><span>每月送一件專屬造型。</span></div></div>
+          <div class="item r-rare"><i>♛</i><div><b>完整目錄</b><span>帽子、服裝、道具、背景與主題，包含限定品。</span></div></div>
+          <div class="item r-unc"><i>✕</i><div><b>無廣告</b><span>沒有東西擋在你和任務之間。</span></div></div>
+          <div class="item r-unc"><i>❄</i><div><b>連續紀錄凍結</b><span>每週一次凍結之外，再加 3 枚半價代幣。</span></div></div>
+        </div>
+        <div class="counter" id="counter" data-labels="{&quot;year&quot;:[&quot;免費試用 14 天&quot;,&quot;14 天內不扣款&quot;,&quot;試用結束前隨時可取消&quot;],&quot;month&quot;:[&quot;升級進階版 · $4.99 / 月&quot;,&quot;不綁約&quot;,&quot;隨時可取消&quot;],&quot;life&quot;:[&quot;終身解鎖 · $59.99&quot;,&quot;一次付清&quot;,&quot;永久享有全部進階功能&quot;]}">
+          <p class="counter-title">選擇方案</p>
+          <div class="plans2" role="radiogroup" aria-label="進階版方案">
+            <label class="plan2"><input type="radio" name="plan" value="year" checked><span class="pname">年費</span><span class="pprice">$29.99</span><span class="pnote">每月 $2.50</span><span class="pbadge">免費 14 天 · −50 %</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="month"><span class="pname">月費</span><span class="pprice">$4.99</span><span class="pnote">按月付款，不綁約</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="life"><span class="pname">終身</span><span class="pprice">$59.99</span><span class="pnote">一次付清</span></label>
+          </div>
+          <a class="btn red go" id="gobtn" href="https://habitquest.expo.app">免費試用 14 天</a>
+          <ul class="sure" id="sure"><li>14 天內不扣款</li><li>試用結束前隨時可取消</li></ul>
+          <p class="pricenote">價格以美元標示，商店會顯示你所在國家的價格。</p>
+        </div>
+      </div>
+      <p class="free">習慣、任務、連續紀錄、航海、魔王和好友功能，永久免費。</p>
+    </div>
+  </section>
+
+  <section class="ports" id="sortie">
+    <div class="wrap">
+      <div class="pass" id="pass">
+        <div class="map">
+          <img src="../assets/v2/escales.png" alt="港口路線：網頁、Google Play，以及霧中的 App Store">
+          <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
+          <span class="tag" style="left: 7%">網頁 · 你在這裡</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · 霧中</span>
+        </div>
+        <div class="body">
+          <div class="left">
+            <div class="meta"><span>登船證</span><span>HABITQUEST · 世界 I</span></div>
+            <div class="legs">
+              <div><small>出發</small><b>WEB</b></div>
+              <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
+              <div><small>下一個港口</small><b>GOOGLE PLAY</b></div>
+            </div>
+            <span class="stamp">即將啟航</span>
+            <p class="note">等 Google 開放正式上架，日期就會公布。再下一站是 App Store，等 Apple 審核通過。</p>
+          </div>
+          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="zh" novalidate>
+            <span class="title">預約登船<small>每到新港口都會通知你。</small></span>
+            <div class="field"><label for="wl-email">電子郵件</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="電子郵件"></div>
+            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>我同意在 HabitQuest 於 App Store 和 Google Play 上架時，收到一封通知信。不會寄垃圾信，隨時可以取消。 <a href="../privacy-policy">隱私權政策</a></span></label>
+            <button class="btn" type="submit">登船 <span class="arrow">▶</span></button>
+            <p class="waitlist-msg" role="status" data-ok="登記成功！上架那天會寄信通知你。" data-error="沒有成功，請確認電子郵件後再試一次。"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>常見問題</h2>
+      <details><summary>HabitQuest 免費嗎？</summary><p>是的，整個遊戲都可以免費玩。進階版是自由選擇的方案，可以移除廣告並增加福利，隨時都能在 App Store 或 Google Play 的設定中取消。</p></details>
+      <details><summary>可以在哪些裝置上使用？</summary><p>iPhone、Android 手機，以及網頁瀏覽器。進度會存在帳號裡，在哪裡都能接著玩。</p></details>
+      <details><summary>支援哪些語言？</summary><p>繁體中文、英文、法文、日文和韓文。</p></details>
+      <details><summary>我的資料安全嗎？</summary><p>你的習慣是私密的。我們不使用分析工具，也絕不販售資料。請參閱<a href="../privacy-policy">隱私權政策</a>（英文）。</p></details>
+      <details><summary>遇到問題怎麼辦？</summary><p>在 App 的「設定 → 客服」聯絡我們，或查看<a href="../support">客服頁面</a>。</p></details>
+    </div>
+  </section>
 </main>
 
-<footer><div class="wrap">
-  <nav>
-    <a href="../support">客服</a>
-    <a href="../privacy-policy">隱私權政策</a>
-    <a href="../terms">使用條款</a>
-    <a href="mailto:habitquest.application@gmail.com">聯絡我們</a>
+<footer>
+  <div class="wrap">
+    <img src="../assets/v2/pip.png" alt="">
+    <a href="#faq">常見問題</a><a href="../support">客服</a><a href="../privacy-policy">隱私權政策</a><a href="../terms">使用條款</a><a href="mailto:habitquest.application@gmail.com">聯絡我們</a>
     <a href="https://www.instagram.com/habitquest.app/">Instagram</a>
     <a href="https://www.tiktok.com/@habitquest.app">TikTok</a>
     <a href="https://www.youtube.com/@habitquest.application">YouTube</a>
-  </nav>
-  <span>© 2026 HabitQuest. 用 ⚔️ 和像素打造。</span>
-</div></footer>
+    <span>© 2026 HabitQuest. 用 ⚔️ 和像素打造。</span>
+  </div>
+</footer>
 </body>
 </html>

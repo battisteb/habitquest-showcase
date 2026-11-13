@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HabitQuest — 습관을 RPG로</title>
 <meta name="description" content="픽셀 아트 습관 트래커: 매일 퀘스트를 달성하고, 연속 기록을 이어가고, 히어로를 키우고, 친구들과 겨뤄요. iPhone과 Android 지원.">
 <meta property="og:title" content="HabitQuest — 습관을 RPG로">
@@ -10,137 +10,261 @@
 <meta property="og:image" content="../assets/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#CFE8FF">
+<meta name="theme-color" content="#232c5c">
 <link rel="icon" href="../assets/icon.png">
 <link rel="alternate" hreflang="en" href="/"><link rel="alternate" hreflang="fr" href="/fr/"><link rel="alternate" hreflang="ja" href="/ja/"><link rel="alternate" hreflang="ko" href="/ko/"><link rel="alternate" hreflang="zh-Hant" href="/zh/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
-<script src="../assets/site.js" defer></script>
+<link rel="stylesheet" href="../assets/v2/site-v2.css">
+<script src="../assets/v2/site-v2.js" defer></script>
 <script src="../assets/waitlist.js" defer></script>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand pixel" href="./"><img src="../assets/icon.png" alt="">HabitQuest</a>
-  <nav class="nav">
-    <a href="#features">기능</a><a href="#faq">자주 묻는 질문</a><a href="../support.ko">고객 지원</a>
-    <a class="nav-play pixel" href="https://habitquest.expo.app">▶ 플레이</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="../assets/v2/pip.png" alt=""><span>HabitQuest</span></a>
+    <nav aria-label="Sections"><a href="#regle">게임 방법</a><a href="#voyage">항해</a><a href="#boss">보스</a><a href="#premium">프리미엄</a></nav>
     <details class="langs"><summary>KO</summary><div>
       <a href="../" hreflang="en" lang="en">English</a>
       <a href="../fr/" hreflang="fr" lang="fr">Français</a>
       <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
       <a href="../zh/" hreflang="zh-Hant" lang="zh-Hant">中文</a>
     </div></details>
-  </nav>
-</div></header>
-
-<main>
-<section class="hero"><div class="wrap">
-  <div>
-    <h1 class="pixel">습관을<br><em>퀘스트</em>로</h1>
-    <p class="lead">매일 퀘스트를 달성하고, 연속 기록을 이어가고, XP와 골드를 모아 픽셀 히어로를 키워요. 그리고 친구에게 도전!</p>
-    <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ 데모 플레이</a><p>무료, 브라우저에서 바로 즐겨요. 설치할 필요 없고, 영웅은 앱으로 그대로 이어져요.</p></div><a class="soft" href="#join">📩 출시일에 알림 받기 ↓</a>
+    <a class="btn" href="https://habitquest.expo.app">플레이</a>
   </div>
-  <div class="hero-art">
-    <div class="phone"><img src="../assets/screens/ko/today.png" alt="" width="390" height="844"></div>
-    <div class="pip" aria-label="Pip">
-      <p class="pip-says">안녕, 나는 핍이야! 하루에 따라 색이 바뀌어.</p>
-      <div class="pip-sprite"><img src="../assets/pip/pip-vert.png" alt="" width="96" height="96"><img src="../assets/pip/pip-orange.png" alt="" width="96" height="96"><img src="../assets/pip/pip-or.png" alt="" width="96" height="96"><img src="../assets/pip/pip-bleu.png" alt="" width="96" height="96"><img src="../assets/pip/pip-violet.png" alt="" width="96" height="96"><img src="../assets/pip/pip-rose.png" alt="" width="96" height="96"></div>
+  <div class="route" aria-hidden="true">
+    <div class="dots"></div><div class="wake" id="wake"></div>
+    <span class="stop" style="left: 3%"></span><span class="stop" style="left: 26%"></span><span class="stop" style="left: 50%"></span><span class="stop" style="left: 74%"></span><span class="stop" style="left: 97%"></span>
+    <img class="ship" id="ship" src="../assets/v2/boat.png" alt="">
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap inner">
+      <div class="card">
+        <h1>너의 습관이<br><span>너의 모험이 돼요.</span></h1>
+        <p class="lead">지킨 하루하루가 너의 배를 앞으로 나아가게 하는 습관 트래커.</p>
+        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">모험 시작하기</a><small>무료 · 브라우저에서 바로 플레이</small></div>
+      </div>
     </div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">플레이 <em>방법</em></h2>
-  <div class="steps">
-    <div class="step"><b>히어로 만들기</b><span>외형과 첫 퀘스트를 1분 안에 골라요.</span></div>
-    <div class="step"><b>퀘스트 달성하기</b><span>습관을 할 때마다 XP와 골드. 연속 기록도 이어져요.</span></div>
-    <div class="step"><b>레벨 업하고 즐기기</b><span>장비를 열고, 미션과 업적을 깨고, 친구를 이겨요.</span></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">앱 <em>속</em>을 살짝 볼까요</h2>
-  <div class="shots">
-    <figure><div class="phone"><img src="../assets/screens/ko/today.png" alt="퀘스트" loading="lazy" width="390" height="844"></div><figcaption>퀘스트</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/ko/profile.png" alt="히어로" loading="lazy" width="390" height="844"></div><figcaption>히어로</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/ko/arena.png" alt="아레나" loading="lazy" width="390" height="844"></div><figcaption>아레나</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/ko/stats.png" alt="성장 기록" loading="lazy" width="390" height="844"></div><figcaption>성장 기록</figcaption></figure>
-  </div>
-</div></section>
-
-<section id="features"><div class="wrap">
-  <h2 class="pixel"><em>습관이 이어지는</em> 모든 장치</h2>
-  <p class="sub">모든 습관이 퀘스트가 돼요. 꾸준히 한 날만큼 히어로가 강해져요.</p>
-  <div class="grid">
-    <div class="card"><div class="icon">⚔️</div><h3>매일 퀘스트</h3><p>매일, 고른 요일, 주 몇 회 등 자유롭게. 카테고리와 템플릿 제공. 달성하면 XP와 골드를 받아요.</p></div>
-    <div class="card"><div class="icon">🔥</div><h3>다정한 연속 기록</h3><p>깜빡한 날은 주 1회 프리즈가 자동으로 지켜 줘요. 끊겨도 불이익 없음: 돌아온 날은 XP 2배, 48시간 안에는 복구도 가능.</p></div>
-    <div class="card"><div class="icon">🧙</div><h3>성장하는 히어로</h3><p>견습생부터 레전드까지 6개 등급. 32×32 픽셀 히어로를 상점의 모자, 의상, 아이템, 테마로 꾸며요.</p></div>
-    <div class="card"><div class="icon">🤺</div><h3>배틀과 챌린지</h3><p>친구의 히어로와 턴제 배틀. 협력 챌린지에서는 친구들과 함께 목표를 달성해요.</p></div>
-    <div class="card"><div class="icon">🏟️</div><h3>아레나</h3><p>하루 한 번, 같은 리그의 플레이어와 대결. 시즌마다 6개 리그를 올라가요.</p></div>
-    <div class="card"><div class="icon">👹</div><h3>이번 주 보스</h3><p>매주 나쁜 습관이 몬스터로. 퀘스트를 달성할 때마다 대미지를 주고 일요일까지 쓰러뜨려요.</p></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">기본 무료. 더 즐기려면 <em>프리미엄</em></h2>
-  <div class="premium">
-    <div class="card"><h3>무료</h3><ul><li>모든 퀘스트, 연속 기록, 히어로</li><li>오늘의 미션과 23개의 업적</li><li>배틀, 협력 챌린지, 아레나</li><li>상점 기본 카탈로그</li></ul></div>
-    <div class="card"><h3>프리미엄 (선택)</h3><ul><li>광고 없음</li><li>연속 기록 프리즈 토큰 추가</li><li>연속 기록과 함께 자라는 드래곤 동료와 매달 한정 아이템</li><li>전체 기간 통계</li><li>상점의 모든 아이템과 한정판</li><li>우선 고객 지원 (48시간 이내)</li></ul></div>
-  </div>
-</div></section>
-
-<section id="beta"><div class="wrap"><div class="beta">
-  <div>
-    <span class="badge pixel">ANDROID 베타</span>
-    <h2 class="pixel"><em>안드로이드 테스터</em>가 되어 주세요</h2>
-    <p>Google Play 출시를 위해 14일 동안 12명의 테스터가 필요해요. 누구보다 먼저 무료로 플레이하고 게임을 함께 만들어요.</p>
-    <ol><li>휴대폰의 Google 계정으로 테스터 그룹에 가입하세요.</li><li>같은 계정으로 Google Play 테스트 페이지를 열고 「테스터 되기」를 누르세요.</li><li>HabitQuest를 설치하고 14일 동안 가끔 열어 주세요.</li></ol>
-  </div>
-  <div class="beta-cta">
-    <a class="play pixel" href="https://groups.google.com/g/habitquest-app-testers" target="_blank" rel="noopener">🧪 1. 테스터 그룹 가입</a>
-    <a class="play pixel" href="https://play.google.com/apps/testing/com.battiste.habitquest" target="_blank" rel="noopener">▶ 2. Google Play에서 테스터 되기</a>
-    <p>무료예요. 이메일은 Google 그룹 가입에만 사용돼요.</p>
-  </div>
-</div></div></section>
-
-<section id="faq"><div class="wrap">
-  <h2 class="pixel">자주 묻는 질문</h2>
-  <details><summary>HabitQuest는 무료인가요?</summary><p>네. 게임은 모두 무료로 즐길 수 있어요. 프리미엄은 광고를 없애고 혜택을 더하는 선택 플랜이고, App Store 또는 Google Play 설정에서 언제든 해지할 수 있어요.</p></details>
-  <details><summary>어떤 기기에서 쓸 수 있나요?</summary><p>iPhone, Android 스마트폰, 그리고 웹 브라우저. 진행 상황은 계정에 저장돼서 어디서든 이어서 할 수 있어요.</p></details>
-  <details><summary>지원 언어는?</summary><p>한국어, 영어, 프랑스어, 일본어, 중국어 번체(대만).</p></details>
-  <details><summary>내 데이터는 안전한가요?</summary><p>습관은 비공개예요. 분석 도구를 쓰지 않고, 데이터를 판매하지도 않아요. <a href="../privacy-policy.ko">개인정보 처리방침</a>을 확인해 주세요.</p></details>
-  <details><summary>도움이 필요하면?</summary><p>앱의 설정 → 고객 지원으로 연락하거나 <a href="../support.ko">고객 지원 페이지</a>를 확인해 주세요.</p></details>
-</div></section>
-
-<section id="join"><div class="wrap"><div class="cta">
-  <h2 class="pixel">모험은 <em>오늘</em> 시작돼요</h2>
-  <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ 데모 플레이</a><p>무료, 브라우저에서 바로 즐겨요. 설치할 필요 없고, 영웅은 앱으로 그대로 이어져요.</p></div><form class="waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="ko" novalidate>
-    <h3 class="pixel">출시 소식 받기</h3>
-    <div class="waitlist-row">
-      <label class="sr" for="wl-email">이메일 주소</label>
-      <input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="이메일 주소">
-      <button type="submit">알려 주세요</button>
+    <div class="voyager" aria-hidden="true">
+      <div class="quest" id="quest" data-quests="[[&quot;20쪽 읽기&quot;,15],[&quot;10분 명상&quot;,12],[&quot;5km 달리기&quot;,20]]">
+        <span class="box"><svg width="14" height="14" viewBox="0 0 7 7" aria-hidden="true"><path d="M6 1h1v1H6zM5 2h1v1H5zM4 3h1v1H4zM0 3h1v1H0zM1 4h1v1H1zM3 4h1v1H3zM2 5h1v1H2z" fill="#ffffff"></path></svg></span><span class="name" id="qname">20쪽 읽기</span> <span class="gain" id="qgain">+15 XP</span>
+        <span class="xpfloat" id="xpf">+15 XP</span>
+      </div>
+      <img src="../assets/v2/boat.png" alt="">
     </div>
-    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <label class="waitlist-consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>HabitQuest가 App Store와 Google Play에 출시되면 이메일 1통을 받는 데 동의해요. 스팸은 없고, 언제든 취소할 수 있어요. <a href="../privacy-policy.ko">개인정보 처리방침</a></span></label>
-    <p class="waitlist-msg" role="status" data-ok="등록했어요! 출시되면 이메일로 알려 드릴게요." data-error="잘 안 됐어요. 이메일 주소를 확인하고 다시 시도해 주세요."></p>
-  </form>
-</div></div></section>
+  </section>
+
+  <div class="trust">
+    <ul class="wrap">
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>평생 무료</b><span>시작할 때 카드가 필요 없어요</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>지금 바로 플레이</b><span>웹에서, 곧 Google Play에서도</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>5개 언어</b><span>한국어, 영어, 프랑스어, 일본어, 중국어</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>데이터는 너의 것</b><span>언제든 계정 삭제 가능</span></div></li>
+    </ul>
+  </div>
+
+  <section class="rules wrap" id="regle">
+    <p class="kicker">게임 규칙</p>
+    <h2>진짜 습관이 너의 퀘스트</h2>
+    <div class="steps">
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="../assets/v2/ko/today.jpg" alt="오늘의 퀘스트 화면: 습관 세 개와 할 일 목록" width="520" height="1125"></div>
+        <span class="num">1</span><h3>습관 고르기</h3><p>독서, 달리기, 일찍 자기: 지키고 싶은 건 뭐든. 한 번만 할 일은 할 일 목록에.</p>
+      </div>
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="../assets/v2/ko/world.jpg" alt="절반이 안개에 덮인 세계 지도" width="520" height="1125" loading="lazy"></div>
+        <span class="num">2</span><h3>완료하면 배가 나아가요</h3><p>XP, 골드, 연속 기록: 지킨 하루가 다음 섬을 가까이 데려와요.</p>
+      </div>
+      <div class="step rv">
+        <div class="bosscard" id="bosscard" data-unit="HP">
+          <span class="tag">이번 주 보스</span>
+          <span class="bname">다시 알림 골렘</span>
+          <div class="hp"><i id="hpbar"></i></div>
+          <span class="hptext" id="hptext">147 / 147 HP</span>
+          <div class="sprite" id="bsprite"><img src="../assets/v2/boss-snooze_golem.png" alt="다시 알림 골렘, 가슴에 알람 시계를 품고 잠든 돌 골렘"><span class="dmg" id="dmg">−10</span></div>
+          <span class="hint">이번 주에 퀘스트를 완료할 때마다 10 피해.</span>
+        </div>
+        <span class="num">3</span><h3>나쁜 습관 물리치기</h3><p>매주 그중 하나가 모습을 드러내고 길을 막아요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pip wrap">
+    <div class="row rv">
+      <img src="../assets/v2/pip.png" alt="Pip">
+      <div class="bubble"><b>PIP</b><p>“안녕, 나는 핍이야! 너의 하루에 따라 색이 바뀌고, 매일 너와 함께해. 힘든 날엔 연속 기록을 얼려 줄게. 자책하지 마.”</p></div>
+    </div>
+  </section>
+
+  <div class="band" id="band" aria-hidden="true">
+    <div class="sailer" id="sailer"><span class="flag">다음 섬으로</span><img src="../assets/v2/boat.png" alt=""></div>
+  </div>
+  <section class="world" id="voyage">
+    <div class="wrap">
+      <p class="kicker">핍의 항해</p>
+      <h2>너의 속도로 펼쳐지는 세계</h2>
+      <div class="figs">
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ko/island.jpg" alt="섬: 단계 길 위의 주인공과 핍" width="520" height="1125" loading="lazy"></div><figcaption><b>세계마다 12개의 섬</b><span>섬마다 단계, 주민, 그리고 보물상자.</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ko/chapter.jpg" alt="일지의 한 페이지: 노을 진 섬 꼭대기의 주인공과 핍" width="520" height="1125" loading="lazy"></div><figcaption><b>너의 항해 일지</b><span>도착한 섬마다 한 페이지.</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ko/bottle.jpg" alt="바다에서 온 병과 편지" width="520" height="1125" loading="lazy"></div><figcaption><b>바다에서 온 병</b><span>세계의 이야기를 전하는 편지.</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ko/braise.jpg" alt="섬 위의 주인공, 핍, 작은 드래곤 브레이즈" width="520" height="1125" loading="lazy"></div><figcaption><b>브레이즈도 함께 자라요</b><span>연속 기록과 함께, 알에서 전설까지.</span><br><span class="prem">프리미엄</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div id="boss">
+    <div class="edge"></div>
+    <div class="beam"></div>
+    <section class="wood wanted">
+      <div class="wrap">
+        <p class="kicker">현상 수배</p>
+        <h2>너의 나쁜 습관을 수배합니다</h2>
+        <p class="sub">매주 그중 하나가 길을 막아요. 물리치고 현상금을 받아요.</p>
+        <div class="posters">
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">생사 불문</span><span class="pf"><img src="../assets/v2/boss-doomscroll_kraken.png" alt=""></span><span class="pn">둠스크롤 크라켄</span><span class="pw">끝없는 스크롤의 죄</span><span class="pb">현상금  50 XP  25 골드</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">생사 불문</span><span class="pf"><img src="../assets/v2/boss-notif_siren.png" alt=""></span><span class="pn">알림 세이렌</span><span class="pw">“띵” 할 때마다</span><span class="pb">현상금  50 XP  25 골드</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">생사 불문</span><span class="pf"><img src="../assets/v2/boss-later_specter.png" alt=""></span><span class="pn">나중에 유령</span><span class="pw">“내일 할게”의 죄</span><span class="pb">현상금  50 XP  25 골드</span></div>
+        </div>
+        <div class="lurk">
+          <p>그리고 세 마리가 더 지도 위를 어슬렁거려요…</p>
+          <div class="shadows">
+            <button class="shadow" type="button"><img src="../assets/v2/boss-snooze_golem.png" alt="다시 알림 골렘"><span data-name="다시 알림 골렘"></span></button>
+            <button class="shadow" type="button"><img src="../assets/v2/boss-couch_troll.png" alt="소파 트롤"><span data-name="소파 트롤"></span></button>
+            <button class="shadow" type="button"><img src="../assets/v2/boss-night_owl.png" alt="밤샘 부엉이"><span data-name="밤샘 부엉이"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="beam"></div>
+    <div class="edge" style="transform: scaleY(-1)"></div>
+  </div>
+
+  <section class="crew">
+    <div class="wrap head">
+      <p class="kicker">함께</p>
+      <h2>동료를 배에 태워요</h2>
+      <p>혼자서도 나아가요. 함께라면 세상 끝까지.</p>
+    </div>
+    <div class="scene">
+      <img src="../assets/v2/crew.png" alt="배 갑판 위의 주인공 네 명">
+      <div class="invite"><div><span class="big">+7일</span><span>친구 초대: <b>두 사람 모두 프리미엄 1주일</b>.</span><a class="btn" href="https://habitquest.expo.app">초대하기</a></div></div>
+    </div>
+  </section>
+
+  <section class="duel" id="duel">
+    <div class="wrap">
+      <div class="art rv"><div class="frame">
+        <img src="../assets/v2/duel.png" alt="대결 중인 두 주인공">
+        <span class="lbl" style="left: 19%">나 · 12일</span><span class="lbl" style="left: 58%">레아 · 9일</span>
+        <span class="bolt" aria-hidden="true">−12</span>
+      </div></div>
+      <div class="txt rv">
+        <p class="kicker">대결과 리그</p>
+        <h2>꾸준함이 너의 무기</h2>
+        <p>친구에게 도전: 영웅들이 턴제로 싸우고, 습관을 잘 지킬수록 공격이 강해져요. 그리고 브론즈부터 마스터까지 6개 리그에 올라요.</p>
+        <div class="leagues" id="leagues"><span>브론즈</span><span>실버</span><span>골드</span><span>플래티넘</span><span>다이아</span><span>마스터</span></div>
+        <a class="btn red" href="https://habitquest.expo.app">친구에게 도전</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium" id="premium">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">평생 무료 · 원하면 영웅급으로</p>
+        <h2>프리미엄 보물상자를 열어요</h2>
+        <p class="lead">너의 영웅을 너의 스타일로: 상점 전체 카탈로그, 매달 받는 한정 아이템, 연속 기록과 함께 자라는 드래곤 브레이즈.</p>
+      </div>
+      <div class="vault" id="vault">
+        <div class="fan">
+          <div class="card"><img src="../assets/v2/look-b.png" alt="드래곤의 뿔과 그림자 망토를 입은 주인공"><span class="r-leg">전설 · 드래곤의 뿔</span></div>
+          <div class="card"><img src="../assets/v2/look-a.png" alt="챔피언의 왕관과 왕실 의상을 입은 주인공"><span class="r-epic">에픽 · 챔피언의 왕관</span></div>
+          <div class="card"><img src="../assets/v2/look-c.png" alt="후광, 황금 갑옷, 날개를 단 주인공"><span class="r-epic">에픽 · 성스러운 후광</span></div>
+        </div>
+        <img class="chest" src="../assets/v2/chest.png" alt="열린 보물상자에서 나오는 브레이즈">
+      </div>
+      <div class="deal">
+        <div class="loot">
+          <div class="item r-leg"><i>B</i><div><b>브레이즈</b><span>연속 기록과 함께 알에서 전설로 자라는 드래곤.</span></div></div>
+          <div class="item r-epic"><i>★</i><div><b>이달의 아이템</b><span>매달 받는 한정 꾸미기 아이템.</span></div></div>
+          <div class="item r-rare"><i>♛</i><div><b>전체 카탈로그</b><span>모자, 의상, 아이템, 배경, 테마. 한정품까지.</span></div></div>
+          <div class="item r-unc"><i>✕</i><div><b>광고 없음</b><span>퀘스트를 방해하지 않아요.</span></div></div>
+          <div class="item r-unc"><i>❄</i><div><b>연속 기록 보호</b><span>매주 보호 1회에 더해 토큰 3개를 반값에.</span></div></div>
+        </div>
+        <div class="counter" id="counter" data-labels="{&quot;year&quot;:[&quot;14일 무료로 체험하기&quot;,&quot;14일 동안 결제 없음&quot;,&quot;체험이 끝나기 전 언제든 해지 가능&quot;],&quot;month&quot;:[&quot;프리미엄 시작 · $4.99 / 월&quot;,&quot;약정 없음&quot;,&quot;언제든 해지 가능&quot;],&quot;life&quot;:[&quot;평생 이용 · $59.99&quot;,&quot;한 번 결제&quot;,&quot;프리미엄의 모든 것을 평생&quot;]}">
+          <p class="counter-title">요금제 고르기</p>
+          <div class="plans2" role="radiogroup" aria-label="프리미엄 요금제">
+            <label class="plan2"><input type="radio" name="plan" value="year" checked><span class="pname">연간</span><span class="pprice">$29.99</span><span class="pnote">월 $2.50</span><span class="pbadge">14일 무료 · −50 %</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="month"><span class="pname">월간</span><span class="pprice">$4.99</span><span class="pnote">매달, 약정 없음</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="life"><span class="pname">평생</span><span class="pprice">$59.99</span><span class="pnote">한 번 결제</span></label>
+          </div>
+          <a class="btn red go" id="gobtn" href="https://habitquest.expo.app">14일 무료로 체험하기</a>
+          <ul class="sure" id="sure"><li>14일 동안 결제 없음</li><li>체험이 끝나기 전 언제든 해지 가능</li></ul>
+          <p class="pricenote">가격은 미국 달러 기준이에요. 스토어에서는 너의 나라 가격이 표시돼요.</p>
+        </div>
+      </div>
+      <p class="free">습관, 할 일, 연속 기록, 항해, 보스, 친구는 평생 무료예요.</p>
+    </div>
+  </section>
+
+  <section class="ports" id="sortie">
+    <div class="wrap">
+      <div class="pass" id="pass">
+        <div class="map">
+          <img src="../assets/v2/escales.png" alt="기항지 경로: 웹, Google Play, 안개 속 App Store">
+          <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
+          <span class="tag" style="left: 7%">WEB · 현재 위치</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · 안개</span>
+        </div>
+        <div class="body">
+          <div class="left">
+            <div class="meta"><span>탑승권</span><span>HABITQUEST · 월드 I</span></div>
+            <div class="legs">
+              <div><small>출발</small><b>WEB</b></div>
+              <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
+              <div><small>다음 기항지</small><b>GOOGLE PLAY</b></div>
+            </div>
+            <span class="stamp">곧 출항</span>
+            <p class="note">Google이 정식 출시를 열면 날짜가 정해져요. 그다음은 App Store, Apple 심사가 끝나는 대로.</p>
+          </div>
+          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="ko" novalidate>
+            <span class="title">승선 예약하기<small>새 기항지마다 알려 드려요.</small></span>
+            <div class="field"><label for="wl-email">이메일</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="이메일 주소"></div>
+            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>HabitQuest가 App Store와 Google Play에 출시되면 이메일 1통을 받는 데 동의해요. 스팸은 없고, 언제든 취소할 수 있어요. <a href="../privacy-policy.ko">개인정보 처리방침</a></span></label>
+            <button class="btn" type="submit">승선하기 <span class="arrow">▶</span></button>
+            <p class="waitlist-msg" role="status" data-ok="등록했어요! 출시되면 이메일로 알려 드릴게요." data-error="잘 안 됐어요. 이메일 주소를 확인하고 다시 시도해 주세요."></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>자주 묻는 질문</h2>
+      <details><summary>HabitQuest는 무료인가요?</summary><p>네. 게임은 모두 무료로 즐길 수 있어요. 프리미엄은 광고를 없애고 혜택을 더하는 선택 플랜이고, App Store 또는 Google Play 설정에서 언제든 해지할 수 있어요.</p></details>
+      <details><summary>어떤 기기에서 쓸 수 있나요?</summary><p>iPhone, Android 스마트폰, 그리고 웹 브라우저. 진행 상황은 계정에 저장돼서 어디서든 이어서 할 수 있어요.</p></details>
+      <details><summary>지원 언어는?</summary><p>한국어, 영어, 프랑스어, 일본어, 중국어 번체(대만).</p></details>
+      <details><summary>내 데이터는 안전한가요?</summary><p>습관은 비공개예요. 분석 도구를 쓰지 않고, 데이터를 판매하지도 않아요. <a href="../privacy-policy.ko">개인정보 처리방침</a>을 확인해 주세요.</p></details>
+      <details><summary>도움이 필요하면?</summary><p>앱의 설정 → 고객 지원으로 연락하거나 <a href="../support.ko">고객 지원 페이지</a>를 확인해 주세요.</p></details>
+    </div>
+  </section>
 </main>
 
-<footer><div class="wrap">
-  <nav>
-    <a href="../support.ko">고객 지원</a>
-    <a href="../privacy-policy.ko">개인정보 처리방침</a>
-    <a href="../terms.ko">이용약관</a>
-    <a href="mailto:habitquest.application@gmail.com">문의</a>
+<footer>
+  <div class="wrap">
+    <img src="../assets/v2/pip.png" alt="">
+    <a href="#faq">자주 묻는 질문</a><a href="../support.ko">고객 지원</a><a href="../privacy-policy.ko">개인정보 처리방침</a><a href="../terms.ko">이용약관</a><a href="mailto:habitquest.application@gmail.com">문의</a>
     <a href="https://www.instagram.com/habitquest.app/">Instagram</a>
     <a href="https://www.tiktok.com/@habitquest.app">TikTok</a>
     <a href="https://www.youtube.com/@habitquest.application">YouTube</a>
-  </nav>
-  <span>© 2026 HabitQuest. ⚔️ 와 픽셀 아트로 만들었어요.</span>
-</div></footer>
+    <span>© 2026 HabitQuest. ⚔️ 와 픽셀 아트로 만들었어요.</span>
+  </div>
+</footer>
 </body>
 </html>

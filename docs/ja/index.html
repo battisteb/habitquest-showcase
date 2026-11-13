@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HabitQuest — 習慣をRPGに</title>
 <meta name="description" content="ドット絵の習慣化アプリ：デイリークエストを達成して連続記録をつなぎ、ヒーローを育て、フレンドと競おう。iPhoneとAndroidに対応。">
 <meta property="og:title" content="HabitQuest — 習慣をRPGに">
@@ -10,136 +10,260 @@
 <meta property="og:image" content="../assets/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#CFE8FF">
+<meta name="theme-color" content="#232c5c">
 <link rel="icon" href="../assets/icon.png">
 <link rel="alternate" hreflang="en" href="/"><link rel="alternate" hreflang="fr" href="/fr/"><link rel="alternate" hreflang="ja" href="/ja/"><link rel="alternate" hreflang="ko" href="/ko/"><link rel="alternate" hreflang="zh-Hant" href="/zh/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=DotGothic16&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
-<script src="../assets/site.js" defer></script>
+<link rel="stylesheet" href="../assets/v2/site-v2.css">
+<script src="../assets/v2/site-v2.js" defer></script>
 <script src="../assets/waitlist.js" defer></script>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand pixel" href="./"><img src="../assets/icon.png" alt="">HabitQuest</a>
-  <nav class="nav">
-    <a href="#features">機能</a><a href="#faq">よくある質問</a><a href="../support.ja">サポート</a>
-    <a class="nav-play pixel" href="https://habitquest.expo.app">▶ 遊ぶ</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="../assets/v2/pip.png" alt=""><span>HabitQuest</span></a>
+    <nav aria-label="Sections"><a href="#regle">あそびかた</a><a href="#voyage">航海</a><a href="#boss">ボス</a><a href="#premium">プレミアム</a></nav>
     <details class="langs"><summary>JA</summary><div>
       <a href="../" hreflang="en" lang="en">English</a>
       <a href="../fr/" hreflang="fr" lang="fr">Français</a>
       <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
       <a href="../zh/" hreflang="zh-Hant" lang="zh-Hant">中文</a>
     </div></details>
-  </nav>
-</div></header>
-
-<main>
-<section class="hero"><div class="wrap">
-  <div>
-    <h1 class="pixel">習慣を<br><em>クエスト</em>に</h1>
-    <p class="lead">デイリークエストを達成して連続記録をつなぎ、XPとゴールドを稼いで、ドット絵のヒーローを育てよう。そしてフレンドに挑戦！</p>
-    <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ デモで遊ぶ</a><p>無料・ブラウザでそのまま遊べます。インストール不要、ヒーローはアプリにも引き継がれます。</p></div><a class="soft" href="#join">📩 リリース日に知らせてもらう ↓</a>
+    <a class="btn" href="https://habitquest.expo.app">プレイ</a>
   </div>
-  <div class="hero-art">
-    <div class="phone"><img src="../assets/screens/ja/today.png" alt="" width="390" height="844"></div>
-    <div class="pip" aria-label="Pip">
-      <p class="pip-says">こんにちは、ピップだよ！1日の様子で色が変わるんだ。</p>
-      <div class="pip-sprite"><img src="../assets/pip/pip-vert.png" alt="" width="96" height="96"><img src="../assets/pip/pip-orange.png" alt="" width="96" height="96"><img src="../assets/pip/pip-or.png" alt="" width="96" height="96"><img src="../assets/pip/pip-bleu.png" alt="" width="96" height="96"><img src="../assets/pip/pip-violet.png" alt="" width="96" height="96"><img src="../assets/pip/pip-rose.png" alt="" width="96" height="96"></div>
+  <div class="route" aria-hidden="true">
+    <div class="dots"></div><div class="wake" id="wake"></div>
+    <span class="stop" style="left: 3%"></span><span class="stop" style="left: 26%"></span><span class="stop" style="left: 50%"></span><span class="stop" style="left: 74%"></span><span class="stop" style="left: 97%"></span>
+    <img class="ship" id="ship" src="../assets/v2/boat.png" alt="">
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap inner">
+      <div class="card">
+        <h1>きみの習慣が、<br><span>きみの冒険に。</span></h1>
+        <p class="lead">続けた日の数だけ、きみの船が進む習慣トラッカー。</p>
+        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">冒険をはじめる</a><small>無料 · ブラウザですぐにプレイ</small></div>
+      </div>
     </div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">遊び<em>かた</em></h2>
-  <div class="steps">
-    <div class="step"><b>ヒーローを作る</b><span>見た目と最初のクエストを1分以内で選ぼう。</span></div>
-    <div class="step"><b>クエストを達成する</b><span>習慣をこなすたびにXPとゴールド。連続記録もつながる。</span></div>
-    <div class="step"><b>レベルアップして遊ぶ</b><span>装備を解放し、ミッションや実績をクリアして、フレンドに勝とう。</span></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">アプリの<em>なか</em>をのぞいてみよう</h2>
-  <div class="shots">
-    <figure><div class="phone"><img src="../assets/screens/ja/today.png" alt="クエスト" loading="lazy" width="390" height="844"></div><figcaption>クエスト</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/ja/profile.png" alt="ヒーロー" loading="lazy" width="390" height="844"></div><figcaption>ヒーロー</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/ja/arena.png" alt="アリーナ" loading="lazy" width="390" height="844"></div><figcaption>アリーナ</figcaption></figure>
-    <figure><div class="phone"><img src="../assets/screens/ja/stats.png" alt="成長の記録" loading="lazy" width="390" height="844"></div><figcaption>成長の記録</figcaption></figure>
-  </div>
-</div></section>
-
-<section id="features"><div class="wrap">
-  <h2 class="pixel"><em>習慣が続く</em>しかけがぜんぶ</h2>
-  <p class="sub">習慣はすべてクエストに。続けた日の数だけ、ヒーローは強くなる。</p>
-  <div class="grid">
-    <div class="card"><div class="icon">⚔️</div><h3>デイリークエスト</h3><p>毎日、選んだ曜日、週に数回など自由に設定。カテゴリーとテンプレートつき。達成するとXPとゴールドがもらえます。</p></div>
-    <div class="card"><div class="icon">🔥</div><h3>やさしい連続記録</h3><p>うっかり忘れた日は週1回のフリーズが自動でカバー。途切れてもペナルティなし：戻ってきた日はXP2倍、48時間以内なら修復も。</p></div>
-    <div class="card"><div class="icon">🧙</div><h3>成長するヒーロー</h3><p>見習いから伝説まで6つのランク。32×32のドット絵ヒーローを、ショップの帽子・服・アクセサリー・テーマで着せ替え。</p></div>
-    <div class="card"><div class="icon">🤺</div><h3>バトルとチャレンジ</h3><p>フレンドのヒーローとターン制バトル。1対1のチャレンジでは、いちばん続けた人が勝ち。</p></div>
-    <div class="card"><div class="icon">🏟️</div><h3>アリーナ</h3><p>1日1回、同じリーグのプレイヤーとバトル。シーズンごとに6つのリーグを駆け上がろう。</p></div>
-    <div class="card"><div class="icon">👹</div><h3>今週のボス</h3><p>毎週、悪い習慣がモンスターに。クエストを達成するたびにダメージを与えて、日曜日までに倒そう。</p></div>
-  </div>
-</div></section>
-
-<section><div class="wrap">
-  <h2 class="pixel">基本無料。もっと楽しむなら<em>プレミアム</em></h2>
-  <div class="premium">
-    <div class="card"><h3>無料</h3><ul><li>すべてのクエスト、連続記録、ヒーロー</li><li>デイリーミッションと23の実績</li><li>バトル、チャレンジ、協力チャレンジ、アリーナ</li><li>ショップの基本カタログ</li></ul></div>
-    <div class="card"><h3>プレミアム（任意）</h3><ul><li>広告なし</li><li>連続記録フリーズのトークンを追加</li><li>連続記録とともに育つドラゴンの相棒と、毎月の限定アイテム</li><li>全期間の統計</li><li>ショップの全アイテムと限定品</li><li>優先サポート（48時間以内）</li></ul></div>
-  </div>
-</div></section>
-
-<section id="beta"><div class="wrap"><div class="beta">
-  <div>
-    <span class="badge pixel">ANDROID ベータ</span>
-    <h2 class="pixel"><em>Androidテスター</em>になろう</h2>
-    <p>Google Playでの公開には、12人のテスターが14日間必要です。だれよりも早く無料で遊んで、ゲームづくりに参加しよう。</p>
-    <ol><li>スマホのGoogleアカウントでテスターグループに参加。</li><li>同じアカウントでGoogle Playのテストページを開き、「テスターになる」をタップ。</li><li>HabitQuestをインストールして、14日間ときどき開いてね。</li></ol>
-  </div>
-  <div class="beta-cta">
-    <a class="play pixel" href="https://groups.google.com/g/habitquest-app-testers" target="_blank" rel="noopener">🧪 1. テスターグループに参加</a>
-    <a class="play pixel" href="https://play.google.com/apps/testing/com.battiste.habitquest" target="_blank" rel="noopener">▶ 2. Google Playでテスターになる</a>
-    <p>無料です。メールアドレスはGoogleグループへの参加にだけ使われます。</p>
-  </div>
-</div></div></section>
-
-<section id="faq"><div class="wrap">
-  <h2 class="pixel">よくある質問</h2>
-  <details><summary>HabitQuestは無料ですか？</summary><p>はい。ゲームはすべて無料で遊べます。プレミアムは広告を消して特典を追加する任意のプランで、App StoreまたはGoogle Playの設定からいつでも解約できます。</p></details>
-  <details><summary>どの端末で使えますか？</summary><p>iPhone、Androidスマホ、そしてウェブブラウザ。進行状況はアカウントに保存され、どこでも続きから遊べます。</p></details>
-  <details><summary>対応言語は？</summary><p>日本語、英語、フランス語、韓国語、繁体字中国語（台湾）。</p></details>
-  <details><summary>データは大丈夫？</summary><p>習慣は非公開です。分析ツールは使わず、データを販売することもありません。<a href="../privacy-policy.ja">プライバシーポリシー</a>をご覧ください。</p></details>
-  <details><summary>困ったときは</summary><p>アプリの設定 → サポートからご連絡いただくか、<a href="../support.ja">サポートページ</a>をご覧ください。</p></details>
-</div></section>
-
-<section id="join"><div class="wrap"><div class="cta">
-  <h2 class="pixel">冒険は<em>今日</em>からはじまる</h2>
-  <div class="demo"><a class="play pixel" href="https://habitquest.expo.app">▶ デモで遊ぶ</a><p>無料・ブラウザでそのまま遊べます。インストール不要、ヒーローはアプリにも引き継がれます。</p></div><form class="waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="ja" novalidate>
-    <h3 class="pixel">公開日にお知らせを受け取る</h3>
-    <div class="waitlist-row">
-      <label class="sr" for="wl-email">メールアドレス</label>
-      <input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="メールアドレス">
-      <button type="submit">知らせてほしい</button>
+    <div class="voyager" aria-hidden="true">
+      <div class="quest" id="quest" data-quests="[[&quot;20ページ読む&quot;,15],[&quot;10分瞑想する&quot;,12],[&quot;5km走る&quot;,20]]">
+        <span class="box"><svg width="14" height="14" viewBox="0 0 7 7" aria-hidden="true"><path d="M6 1h1v1H6zM5 2h1v1H5zM4 3h1v1H4zM0 3h1v1H0zM1 4h1v1H1zM3 4h1v1H3zM2 5h1v1H2z" fill="#ffffff"></path></svg></span><span class="name" id="qname">20ページ読む</span> <span class="gain" id="qgain">+15 XP</span>
+        <span class="xpfloat" id="xpf">+15 XP</span>
+      </div>
+      <img src="../assets/v2/boat.png" alt="">
     </div>
-    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <label class="waitlist-consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>HabitQuestがApp StoreとGoogle Playで公開されたときに、メールを1通受け取ることに同意します。迷惑メールは送りません。いつでも解除できます。 <a href="../privacy-policy.ja">プライバシーポリシー</a></span></label>
-    <p class="waitlist-msg" role="status" data-ok="登録しました！公開日にメールでお知らせします。" data-error="うまくいきませんでした。メールアドレスを確認してもう一度お試しください。"></p>
-  </form>
-</div></div></section>
+  </section>
+
+  <div class="trust">
+    <ul class="wrap">
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>ずっと無料</b><span>はじめるのにカード不要</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>今すぐプレイ</b><span>Webで。まもなく Google Play にも</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>5つの言語</b><span>日本語・英語・フランス語・韓国語・中国語</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>データはきみのもの</b><span>アカウントはいつでも削除できる</span></div></li>
+    </ul>
+  </div>
+
+  <section class="rules wrap" id="regle">
+    <p class="kicker">ゲームのルール</p>
+    <h2>リアルな習慣が、きみのクエスト</h2>
+    <div class="steps">
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="../assets/v2/ja/today.jpg" alt="今日のクエスト画面：3つの習慣とやることリスト" width="520" height="1125"></div>
+        <span class="num">1</span><h3>習慣をえらぶ</h3><p>読書、ランニング、早寝：続けたいことを自由に。単発のことはやることリストへ。</p>
+      </div>
+      <div class="step rv">
+        <div class="phone tilt"><img class="shot" src="../assets/v2/ja/world.jpg" alt="半分が霧につつまれた世界地図" width="520" height="1125" loading="lazy"></div>
+        <span class="num">2</span><h3>達成すると、船が進む</h3><p>XP、ゴールド、連続記録：続けた日が次の島へ近づける。</p>
+      </div>
+      <div class="step rv">
+        <div class="bosscard" id="bosscard" data-unit="HP">
+          <span class="tag">今週のボス</span>
+          <span class="bname">スヌーズゴーレム</span>
+          <div class="hp"><i id="hpbar"></i></div>
+          <span class="hptext" id="hptext">147 / 147 HP</span>
+          <div class="sprite" id="bsprite"><img src="../assets/v2/boss-snooze_golem.png" alt="スヌーズゴーレム。胸に目覚まし時計をかかえて眠る石のゴーレム"><span class="dmg" id="dmg">−10</span></div>
+          <span class="hint">今週クエストを達成するたびに10ダメージ。</span>
+        </div>
+        <span class="num">3</span><h3>悪い習慣をたおす</h3><p>毎週そのひとつが姿をあらわし、行く手をふさぐ。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pip wrap">
+    <div class="row rv">
+      <img src="../assets/v2/pip.png" alt="Pip">
+      <div class="bubble"><b>PIP</b><p>「やあ、ぼくはピップ！その日の気分で色が変わって、毎日きみのそばにいるよ。つらい日は連続記録を凍結。自分を責めなくていい。」</p></div>
+    </div>
+  </section>
+
+  <div class="band" id="band" aria-hidden="true">
+    <div class="sailer" id="sailer"><span class="flag">次の島へ</span><img src="../assets/v2/boat.png" alt=""></div>
+  </div>
+  <section class="world" id="voyage">
+    <div class="wrap">
+      <p class="kicker">ピップの航海</p>
+      <h2>きみのペースでひらく世界</h2>
+      <div class="figs">
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ja/island.jpg" alt="島：ステージの道をいく主人公とピップ" width="520" height="1125" loading="lazy"></div><figcaption><b>1つの世界に12の島</b><span>それぞれにステージ、住人、宝箱。</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ja/chapter.jpg" alt="本のページ：夕日の島の頂上にいる主人公とピップ" width="520" height="1125" loading="lazy"></div><figcaption><b>航海の本</b><span>たどりついた島ごとに1ページ。</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ja/bottle.jpg" alt="海からのボトルとメッセージ" width="520" height="1125" loading="lazy"></div><figcaption><b>海からのボトル</b><span>世界の物語を伝えるメッセージ。</span></figcaption></figure>
+        <figure class="rv"><div class="phone tilt"><img class="shot" src="../assets/v2/ja/braise.jpg" alt="島にいる主人公、ピップ、小さなドラゴンのブレイズ" width="520" height="1125" loading="lazy"></div><figcaption><b>ブレイズもいっしょに育つ</b><span>連続記録とともに、タマゴから伝説へ。</span><br><span class="prem">プレミアム</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div id="boss">
+    <div class="edge"></div>
+    <div class="beam"></div>
+    <section class="wood wanted">
+      <div class="wrap">
+        <p class="kicker">おたずね者</p>
+        <h2>きみの悪い習慣、指名手配中</h2>
+        <p class="sub">毎週そのひとつが行く手をふさぐ。たおして賞金をゲット。</p>
+        <div class="posters">
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">たおせ</span><span class="pf"><img src="../assets/v2/boss-doomscroll_kraken.png" alt=""></span><span class="pn">ドゥームスクロール・クラーケン</span><span class="pw">やめられないスクロールの罪</span><span class="pb">賞金  50 XP  25 ゴールド</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">たおせ</span><span class="pf"><img src="../assets/v2/boss-notif_siren.png" alt=""></span><span class="pn">通知のセイレーン</span><span class="pw">「ピコン」のたびに</span><span class="pb">賞金  50 XP  25 ゴールド</span></div>
+          <div class="poster rv"><span class="ph">WANTED</span><span class="ps">たおせ</span><span class="pf"><img src="../assets/v2/boss-later_specter.png" alt=""></span><span class="pn">あとまわしスペクター</span><span class="pw">「明日やる」の罪</span><span class="pb">賞金  50 XP  25 ゴールド</span></div>
+        </div>
+        <div class="lurk">
+          <p>さらに3体が地図のどこかに…</p>
+          <div class="shadows">
+            <button class="shadow" type="button"><img src="../assets/v2/boss-snooze_golem.png" alt="スヌーズゴーレム"><span data-name="スヌーズゴーレム"></span></button>
+            <button class="shadow" type="button"><img src="../assets/v2/boss-couch_troll.png" alt="ソファのトロール"><span data-name="ソファのトロール"></span></button>
+            <button class="shadow" type="button"><img src="../assets/v2/boss-night_owl.png" alt="夜ふかしフクロウ"><span data-name="夜ふかしフクロウ"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="beam"></div>
+    <div class="edge" style="transform: scaleY(-1)"></div>
+  </div>
+
+  <section class="crew">
+    <div class="wrap head">
+      <p class="kicker">なかまと</p>
+      <h2>仲間を船にのせよう</h2>
+      <p>ひとりでも進める。みんなとなら、世界の果てまで。</p>
+    </div>
+    <div class="scene">
+      <img src="../assets/v2/crew.png" alt="船の甲板にいる4人の主人公">
+      <div class="invite"><div><span class="big">+7日</span><span>友だちを招待：<b>ふたりともプレミアム1週間</b>。</span><a class="btn" href="https://habitquest.expo.app">招待する</a></div></div>
+    </div>
+  </section>
+
+  <section class="duel" id="duel">
+    <div class="wrap">
+      <div class="art rv"><div class="frame">
+        <img src="../assets/v2/duel.png" alt="デュエル中の2人の主人公">
+        <span class="lbl" style="left: 19%">きみ · 12日</span><span class="lbl" style="left: 58%">レア · 9日</span>
+        <span class="bolt" aria-hidden="true">−12</span>
+      </div></div>
+      <div class="txt rv">
+        <p class="kicker">デュエルとリーグ</p>
+        <h2>続ける力が、きみの武器</h2>
+        <p>友だちに挑戦：ヒーロー同士のターン制バトル。習慣を続けるほど攻撃が強くなる。さらにブロンズからマスターまで6つのリーグへ。</p>
+        <div class="leagues" id="leagues"><span>ブロンズ</span><span>シルバー</span><span>ゴールド</span><span>プラチナ</span><span>ダイヤ</span><span>マスター</span></div>
+        <a class="btn red" href="https://habitquest.expo.app">友だちに挑戦</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium" id="premium">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">ずっと無料 · のぞむならヒーロー級に</p>
+        <h2>プレミアムの宝箱をひらこう</h2>
+        <p class="lead">きみのヒーローを、きみのスタイルで：ショップの全カタログ、毎月の限定アイテム、連続記録とともに育つドラゴンのブレイズ。</p>
+      </div>
+      <div class="vault" id="vault">
+        <div class="fan">
+          <div class="card"><img src="../assets/v2/look-b.png" alt="ドラゴンの角とシャドウマントの主人公"><span class="r-leg">レジェンダリー · ドラゴンの角</span></div>
+          <div class="card"><img src="../assets/v2/look-a.png" alt="チャンピオンの王冠と王家の衣の主人公"><span class="r-epic">エピック · チャンピオンの王冠</span></div>
+          <div class="card"><img src="../assets/v2/look-c.png" alt="光輪、黄金のよろい、翼の主人公"><span class="r-epic">エピック · 聖なる光輪</span></div>
+        </div>
+        <img class="chest" src="../assets/v2/chest.png" alt="ひらいた宝箱から出てくるブレイズ">
+      </div>
+      <div class="deal">
+        <div class="loot">
+          <div class="item r-leg"><i>B</i><div><b>ブレイズ</b><span>連続記録とともに、タマゴから伝説へ育つドラゴン。</span></div></div>
+          <div class="item r-epic"><i>★</i><div><b>今月のアイテム</b><span>毎月もらえる限定コスメ。</span></div></div>
+          <div class="item r-rare"><i>♛</i><div><b>全カタログ</b><span>帽子、衣装、アイテム、背景、テーマ。限定品も。</span></div></div>
+          <div class="item r-unc"><i>✕</i><div><b>広告なし</b><span>クエストのじゃまをしない。</span></div></div>
+          <div class="item r-unc"><i>❄</i><div><b>ストリークフリーズ</b><span>週1回のフリーズに加えて、トークン3つが半額。</span></div></div>
+        </div>
+        <div class="counter" id="counter" data-labels="{&quot;year&quot;:[&quot;14日間無料で試す&quot;,&quot;14日間は支払いなし&quot;,&quot;無料期間が終わるまでいつでも解約できる&quot;],&quot;month&quot;:[&quot;プレミアムにする · $4.99 / 月&quot;,&quot;縛りなし&quot;,&quot;いつでも解約できる&quot;],&quot;life&quot;:[&quot;ずっと使える · $59.99&quot;,&quot;1回払い&quot;,&quot;プレミアムのすべてをずっと&quot;]}">
+          <p class="counter-title">プランをえらぶ</p>
+          <div class="plans2" role="radiogroup" aria-label="プレミアムのプラン">
+            <label class="plan2"><input type="radio" name="plan" value="year" checked><span class="pname">年額</span><span class="pprice">$29.99</span><span class="pnote">月あたり $2.50</span><span class="pbadge">14日間無料 · −50 %</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="month"><span class="pname">月額</span><span class="pprice">$4.99</span><span class="pnote">1か月ごと、縛りなし</span></label>
+            <label class="plan2"><input type="radio" name="plan" value="life"><span class="pname">買い切り</span><span class="pprice">$59.99</span><span class="pnote">1回払い</span></label>
+          </div>
+          <a class="btn red go" id="gobtn" href="https://habitquest.expo.app">14日間無料で試す</a>
+          <ul class="sure" id="sure"><li>14日間は支払いなし</li><li>無料期間が終わるまでいつでも解約できる</li></ul>
+          <p class="pricenote">価格は米ドル表示です。ストアではきみの国の価格が表示されます。</p>
+        </div>
+      </div>
+      <p class="free">習慣、タスク、連続記録、航海、ボス、友だちは、ずっと無料。</p>
+    </div>
+  </section>
+
+  <section class="ports" id="sortie">
+    <div class="wrap">
+      <div class="pass" id="pass">
+        <div class="map">
+          <img src="../assets/v2/escales.png" alt="寄港地のルート：Web、Google Play、霧の中の App Store">
+          <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
+          <span class="tag" style="left: 7%">WEB · 現在地</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · 霧の中</span>
+        </div>
+        <div class="body">
+          <div class="left">
+            <div class="meta"><span>搭乗券</span><span>HABITQUEST · ワールド I</span></div>
+            <div class="legs">
+              <div><small>出発</small><b>WEB</b></div>
+              <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
+              <div><small>次の寄港地</small><b>GOOGLE PLAY</b></div>
+            </div>
+            <span class="stamp">まもなく</span>
+            <p class="note">Google が公開を開始したら日付が決まります。その次は App Store、Apple の審査がおわりしだい。</p>
+          </div>
+          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="ja" novalidate>
+            <span class="title">乗船を予約する<small>新しい寄港地ごとにお知らせします。</small></span>
+            <div class="field"><label for="wl-email">メールアドレス</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="メールアドレス"></div>
+            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>HabitQuestがApp StoreとGoogle Playで公開されたときに、メールを1通受け取ることに同意します。迷惑メールは送りません。いつでも解除できます。 <a href="../privacy-policy.ja">プライバシーポリシー</a></span></label>
+            <button class="btn" type="submit">乗船する <span class="arrow">▶</span></button>
+            <p class="waitlist-msg" role="status" data-ok="登録しました！公開日にメールでお知らせします。" data-error="うまくいきませんでした。メールアドレスを確認してもう一度お試しください。"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>よくある質問</h2>
+      <details><summary>HabitQuestは無料ですか？</summary><p>はい。ゲームはすべて無料で遊べます。プレミアムは広告を消して特典を追加する任意のプランで、App StoreまたはGoogle Playの設定からいつでも解約できます。</p></details>
+      <details><summary>どの端末で使えますか？</summary><p>iPhone、Androidスマホ、そしてウェブブラウザ。進行状況はアカウントに保存され、どこでも続きから遊べます。</p></details>
+      <details><summary>対応言語は？</summary><p>日本語、英語、フランス語、韓国語、繁体字中国語（台湾）。</p></details>
+      <details><summary>データは大丈夫？</summary><p>習慣は非公開です。分析ツールは使わず、データを販売することもありません。<a href="../privacy-policy.ja">プライバシーポリシー</a>をご覧ください。</p></details>
+      <details><summary>困ったときは</summary><p>アプリの設定 → サポートからご連絡いただくか、<a href="../support.ja">サポートページ</a>をご覧ください。</p></details>
+    </div>
+  </section>
 </main>
 
-<footer><div class="wrap">
-  <nav>
-    <a href="../support.ja">サポート</a>
-    <a href="../privacy-policy.ja">プライバシーポリシー</a>
-    <a href="../terms.ja">利用規約</a>
-    <a href="mailto:habitquest.application@gmail.com">お問い合わせ</a>
+<footer>
+  <div class="wrap">
+    <img src="../assets/v2/pip.png" alt="">
+    <a href="#faq">よくある質問</a><a href="../support.ja">サポート</a><a href="../privacy-policy.ja">プライバシーポリシー</a><a href="../terms.ja">利用規約</a><a href="mailto:habitquest.application@gmail.com">お問い合わせ</a>
     <a href="https://www.instagram.com/habitquest.app/">Instagram</a>
     <a href="https://www.tiktok.com/@habitquest.app">TikTok</a>
     <a href="https://www.youtube.com/@habitquest.application">YouTube</a>
-  </nav>
-  <span>© 2026 HabitQuest. ⚔️ とドット絵で作りました。</span>
-</div></footer>
+    <span>© 2026 HabitQuest. ⚔️ とドット絵で作りました。</span>
+  </div>
+</footer>
 </body>
 </html>
