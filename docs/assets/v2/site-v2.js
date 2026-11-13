@@ -15,21 +15,6 @@
   }
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  // 2. Hero: a quest gets checked, XP floats up, the counters move.
-  let q = document.getElementById('quest');
-  let quests = JSON.parse(q.dataset.quests);
-  let qi = 0;
-  let qn = document.getElementById('qname'), qg = document.getElementById('qgain'), xf = document.getElementById('xpf');
-  function cycle() {
-    q.classList.add('done'); xf.textContent = '+' + quests[qi][1] + ' XP';
-    xf.classList.remove('go'); void xf.offsetWidth; xf.classList.add('go');
-    setTimeout(function () {
-      qi = (qi + 1) % quests.length; q.classList.remove('done');
-      qn.textContent = quests[qi][0]; qg.textContent = '+' + quests[qi][1] + ' XP';
-    }, 2200);
-  }
-  if (!still) { setTimeout(cycle, 900); setInterval(cycle, 3600); }
-
   // 3. Reveal below-the-fold blocks as they come in (everything is visible without script).
   let rv = [].slice.call(document.querySelectorAll('.rv'));
   let once = {};
