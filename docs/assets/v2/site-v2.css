@@ -345,3 +345,10 @@ html[lang="ja"] .step h3, html[lang="ko"] .step h3, html[lang^="zh"] .step h3 { 
 .item.r-ai { color: #b48cff; }
 .item.r-ai i { font-size: 15px; }
 .item .new { font-family: var(--pixel); font-size: 13px; color: #11163a; background: #b48cff; padding: 0 5px; margin-left: 6px; vertical-align: 3px; }
+
+/* launch day (25/11): official store badges, hero and boarding pass */
+.store { display: inline-block; line-height: 0; }
+.store img { height: 54px; width: auto; display: block; }
+.store-soon { display: inline-block; align-self: center; padding: 8px 12px; border: 2px dashed currentColor; font-size: 13px; letter-spacing: .04em; opacity: .75; }
+.store img[src*="google-play"] { height: 70px; margin: -8px -7px; } /* the Google badge carries its own padding */
+.pass .right.launch .stores { display: flex; flex-wrap: wrap; gap: 10px; }

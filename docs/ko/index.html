@@ -18,7 +18,6 @@
 <link href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css" rel="stylesheet">
 <link rel="stylesheet" href="../assets/v2/site-v2.css">
 <script src="../assets/v2/site-v2.js" defer></script>
-<script src="../assets/waitlist.js" defer></script>
 </head>
 <body>
 <header class="top">
@@ -46,7 +45,7 @@
       <div class="card">
         <h1>너의 습관이<br><span>너의 모험이 돼요.</span></h1>
         <p class="lead">지킨 하루하루가 너의 배를 앞으로 나아가게 하는 습관 트래커.</p>
-        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">모험 시작하기</a><small>무료 · 브라우저에서 바로 플레이</small></div>
+        <div class="ctas"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="App Store에서 다운로드"></a><span class="store-soon">Google Play · 며칠 안에 출시</span><a class="btn" href="https://habitquest.expo.app">브라우저에서 플레이</a><small>iPhone, Android, 웹에서 무료</small></div>
       </div>
     </div>
   </section>
@@ -54,7 +53,7 @@
   <div class="trust">
     <ul class="wrap">
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>평생 무료</b><span>시작할 때 카드가 필요 없어요</span></div></li>
-      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>지금 바로 플레이</b><span>웹에서, 곧 Google Play에서도</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>지금 바로 플레이</b><span>iPhone, Android, 웹에서</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>5개 언어</b><span>한국어, 영어, 프랑스어, 일본어, 중국어</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>데이터는 너의 것</b><span>언제든 계정 삭제 가능</span></div></li>
     </ul>
@@ -224,9 +223,9 @@
     <div class="wrap">
       <div class="pass" id="pass">
         <div class="map">
-          <img src="../assets/v2/escales.png" alt="기항지 경로: 웹, Google Play, 안개 속 App Store">
+          <img src="../assets/v2/escales.png" alt="기항지 항로: 웹, Google Play, App Store">
           <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
-          <span class="tag" style="left: 7%">WEB · 현재 위치</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · 안개</span>
+          <span class="tag" style="left: 7%">WEB</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag next" style="left: 76%">APP STORE</span>
         </div>
         <div class="body">
           <div class="left">
@@ -234,19 +233,15 @@
             <div class="legs">
               <div><small>출발</small><b>WEB</b></div>
               <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
-              <div><small>다음 기항지</small><b>GOOGLE PLAY</b></div>
+              <div><small>열린 기항지</small><b>iPHONE · WEB</b></div>
             </div>
-            <span class="stamp">곧 출항</span>
-            <p class="note">Google이 정식 출시를 열면 날짜가 정해져요. 그다음은 App Store, Apple 심사가 끝나는 대로.</p>
+            <span class="stamp">출시</span>
+            <p class="note">11월 25일 출시: 이제 App Store에서 만나요. Google Play는 며칠 안에 열려요. 웹 계정으로 앱에 로그인하면 진행 상황도 그대로예요.</p>
           </div>
-          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="ko" novalidate>
-            <span class="title">승선 예약하기<small>새 기항지마다 알려 드려요.</small></span>
-            <div class="field"><label for="wl-email">이메일</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="이메일 주소"></div>
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>HabitQuest가 App Store와 Google Play에 출시되면 이메일 1통을 받는 데 동의해요. 스팸은 없고, 언제든 취소할 수 있어요. <a href="../privacy-policy.ko">개인정보 처리방침</a></span></label>
-            <button class="btn" type="submit">승선하기 <span class="arrow">▶</span></button>
-            <p class="waitlist-msg" role="status" data-ok="등록했어요! 출시되면 이메일로 알려 드릴게요." data-error="잘 안 됐어요. 이메일 주소를 확인하고 다시 시도해 주세요."></p>
-          </form>
+          <div class="right launch">
+            <span class="title">모두 승선!<small>iPhone에서 무료</small></span>
+            <div class="stores"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="App Store에서 다운로드"></a><span class="store-soon">Google Play · 며칠 안에 출시</span></div>
+          </div>
         </div>
       </div>
     </div>
