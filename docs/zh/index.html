@@ -17,7 +17,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/v2/site-v2.css">
 <script src="../assets/v2/site-v2.js" defer></script>
-<script src="../assets/waitlist.js" defer></script>
 </head>
 <body>
 <header class="top">
@@ -45,7 +44,7 @@
       <div class="card">
         <h1>你的習慣，<br><span>就是你的冒險。</span></h1>
         <p class="lead">每堅持一天，你的船就前進一步的習慣追蹤器。</p>
-        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">開始冒險</a><small>免費 · 在瀏覽器裡馬上玩</small></div>
+        <div class="ctas"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="在 App Store 下載"></a><span class="store-soon">Google Play · 幾天內推出</span><a class="btn" href="https://habitquest.expo.app">在瀏覽器裡玩</a><small>iPhone、Android 與網頁版免費</small></div>
       </div>
     </div>
   </section>
@@ -53,7 +52,7 @@
   <div class="trust">
     <ul class="wrap">
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>永久免費</b><span>開始時不需要信用卡</span></div></li>
-      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>現在就能玩</b><span>網頁版已上線，即將登上 Google Play</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>現在就能玩</b><span>iPhone、Android 與網頁版</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>5 種語言</b><span>繁體中文、英文、法文、日文、韓文</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>資料屬於你</b><span>隨時可以刪除帳號</span></div></li>
     </ul>
@@ -223,9 +222,9 @@
     <div class="wrap">
       <div class="pass" id="pass">
         <div class="map">
-          <img src="../assets/v2/escales.png" alt="港口路線：網頁、Google Play，以及霧中的 App Store">
+          <img src="../assets/v2/escales.png" alt="港口航線：網頁、Google Play 與 App Store">
           <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
-          <span class="tag" style="left: 7%">網頁 · 你在這裡</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · 霧中</span>
+          <span class="tag" style="left: 7%">網頁</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag next" style="left: 76%">APP STORE</span>
         </div>
         <div class="body">
           <div class="left">
@@ -233,19 +232,15 @@
             <div class="legs">
               <div><small>出發</small><b>WEB</b></div>
               <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
-              <div><small>下一個港口</small><b>GOOGLE PLAY</b></div>
+              <div><small>開放港口</small><b>iPHONE · WEB</b></div>
             </div>
-            <span class="stamp">即將啟航</span>
-            <p class="note">等 Google 開放正式上架，日期就會公布。再下一站是 App Store，等 Apple 審核通過。</p>
+            <span class="stamp">已上架</span>
+            <p class="note">11 月 25 日上架：HabitQuest 已登上 App Store，Google Play 將在幾天內推出。用網頁版帳號登入 App，進度完整保留。</p>
           </div>
-          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="zh" novalidate>
-            <span class="title">預約登船<small>每到新港口都會通知你。</small></span>
-            <div class="field"><label for="wl-email">電子郵件</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="電子郵件"></div>
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>我同意在 HabitQuest 於 App Store 和 Google Play 上架時，收到一封通知信。不會寄垃圾信，隨時可以取消。 <a href="../privacy-policy">隱私權政策</a></span></label>
-            <button class="btn" type="submit">登船 <span class="arrow">▶</span></button>
-            <p class="waitlist-msg" role="status" data-ok="登記成功！上架那天會寄信通知你。" data-error="沒有成功，請確認電子郵件後再試一次。"></p>
-          </form>
+          <div class="right launch">
+            <span class="title">全員登船！<small>iPhone 免費</small></span>
+            <div class="stores"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="在 App Store 下載"></a><span class="store-soon">Google Play · 幾天內推出</span></div>
+          </div>
         </div>
       </div>
     </div>

@@ -17,7 +17,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/v2/site-v2.css">
 <script src="../assets/v2/site-v2.js" defer></script>
-<script src="../assets/waitlist.js" defer></script>
 </head>
 <body>
 <header class="top">
@@ -45,7 +44,7 @@
       <div class="card">
         <h1>Tes habitudes.<br><span>Ton aventure.</span></h1>
         <p class="lead">Le tracker d’habitudes où chaque jour tenu fait avancer ton bateau.</p>
-        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">Commencer l’aventure</a><small>Gratuit · jouable tout de suite dans ton navigateur</small></div>
+        <div class="ctas"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="Télécharger dans l’App Store"></a><span class="store-soon">Google Play · dans quelques jours</span><a class="btn" href="https://habitquest.expo.app">Jouer dans le navigateur</a><small>Gratuit sur iPhone, Android et le web</small></div>
       </div>
     </div>
   </section>
@@ -53,7 +52,7 @@
   <div class="trust">
     <ul class="wrap">
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>Gratuit pour toujours</b><span>Sans carte bancaire pour commencer</span></div></li>
-      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>Jouable maintenant</b><span>Sur le web, bientôt sur Google Play</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>Jouable maintenant</b><span>Sur iPhone, Android et le web</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>En 5 langues</b><span>Français, anglais, japonais, coréen, chinois</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>Tes données à toi</b><span>Compte supprimable à tout moment</span></div></li>
     </ul>
@@ -222,9 +221,9 @@
     <div class="wrap">
       <div class="pass" id="pass">
         <div class="map">
-          <img src="../assets/v2/escales.png" alt="La route des escales : le web, Google Play, puis l’App Store dans la brume">
+          <img src="../assets/v2/escales.png" alt="La route des escales : le web, Google Play et l’App Store">
           <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
-          <span class="tag" style="left: 7%">WEB · TU ES ICI</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · BRUME</span>
+          <span class="tag" style="left: 7%">WEB</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag next" style="left: 76%">APP STORE</span>
         </div>
         <div class="body">
           <div class="left">
@@ -232,19 +231,15 @@
             <div class="legs">
               <div><small>DÉPART</small><b>WEB</b></div>
               <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
-              <div><small>PROCHAINE ESCALE</small><b>GOOGLE PLAY</b></div>
+              <div><small>ESCALES OUVERTES</small><b>iPHONE · WEB</b></div>
             </div>
-            <span class="stamp">BIENTÔT</span>
-            <p class="note">La date tombe dès que Google ouvre la production. Escale suivante : l’App Store, dès qu’Apple aura validé l’app iPhone.</p>
+            <span class="stamp">DISPONIBLE</span>
+            <p class="note">Sortie le 25 novembre : HabitQuest est sur l’App Store, Google Play suit dans quelques jours. Ton compte web marche dans l’app, progression comprise.</p>
           </div>
-          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="fr" novalidate>
-            <span class="title">Réserve ta place à bord<small>On te prévient à chaque nouvelle escale.</small></span>
-            <div class="field"><label for="wl-email">TON E-MAIL</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="Ton e-mail"></div>
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>J'accepte de recevoir un e-mail quand HabitQuest sera disponible sur l'App Store et Google Play. Pas de spam, désinscription à tout moment. <a href="../privacy-policy.fr">Confidentialité</a></span></label>
-            <button class="btn" type="submit">Embarquer <span class="arrow">▶</span></button>
-            <p class="waitlist-msg" role="status" data-ok="C'est noté ! On t'écrit le jour de la sortie." data-error="Ça n'a pas marché. Vérifie ton e-mail et réessaie."></p>
-          </form>
+          <div class="right launch">
+            <span class="title">Tout le monde à bord !<small>Gratuit sur iPhone</small></span>
+            <div class="stores"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="Télécharger dans l’App Store"></a><span class="store-soon">Google Play · dans quelques jours</span></div>
+          </div>
         </div>
       </div>
     </div>
