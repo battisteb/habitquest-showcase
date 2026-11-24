@@ -17,13 +17,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=DotGothic16&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/v2/site-v2.css">
 <script src="../assets/v2/site-v2.js" defer></script>
-<script src="../assets/waitlist.js" defer></script>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#top"><img src="../assets/v2/pip.png" alt=""><span>HabitQuest</span></a>
-    <nav aria-label="Sections"><a href="#regle">あそびかた</a><a href="#voyage">航海</a><a href="#boss">ボス</a><a href="#premium">プレミアム</a></nav>
+    <nav aria-label="Sections"><a href="#regle">あそびかた</a><a href="#voyage">航海</a><a href="#boss">ボス</a><a href="#coach">AIコーチ</a><a href="#premium">プレミアム</a></nav>
     <details class="langs"><summary>JA</summary><div>
       <a href="../" hreflang="en" lang="en">English</a>
       <a href="../fr/" hreflang="fr" lang="fr">Français</a>
@@ -45,7 +44,7 @@
       <div class="card">
         <h1>きみの習慣が、<br><span>きみの冒険に。</span></h1>
         <p class="lead">続けた日の数だけ、きみの船が進む習慣トラッカー。</p>
-        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">冒険をはじめる</a><small>無料 · ブラウザですぐにプレイ</small></div>
+        <div class="ctas"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="App Store からダウンロード"></a><span class="store-soon">Google Play · 数日以内に配信</span><a class="btn" href="https://habitquest.expo.app">ブラウザでプレイ</a><small>iPhone・Android・Webで無料</small></div>
       </div>
     </div>
   </section>
@@ -53,7 +52,7 @@
   <div class="trust">
     <ul class="wrap">
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>ずっと無料</b><span>はじめるのにカード不要</span></div></li>
-      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>今すぐプレイ</b><span>Webで。まもなく Google Play にも</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>今すぐプレイ</b><span>iPhone・Android・Webで</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>5つの言語</b><span>日本語・英語・フランス語・韓国語・中国語</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>データはきみのもの</b><span>アカウントはいつでも削除できる</span></div></li>
     </ul>
@@ -89,6 +88,20 @@
     <div class="row rv">
       <img src="../assets/v2/pip.png" alt="Pip">
       <div class="bubble"><b>PIP</b><p>「やあ、ぼくはピップ！その日の気分で色が変わって、毎日きみのそばにいるよ。つらい日は連続記録を凍結。自分を責めなくていい。」</p></div>
+    </div>
+  </section>
+
+  <section class="coachsec" id="coach">
+    <div class="wrap">
+      <p class="kicker">プレミアムに新登場 · <span class="ia">AI</span></p>
+      <h2>AIコーチのPip</h2>
+      <p class="lead">Pipはきみのクエスト、一週間、気分を読みとるよ。うまくいかないときは、ワンタップで使える小さな調整を提案するよ。提案するのはPip、決めるのはきみ。</p>
+      <div class="figs">
+        <figure><div class="phone"><img class="shot" src="../assets/v2/ja/coach-line.jpg" alt="「今日」画面のPipの紫のライン" width="520" height="1125" loading="lazy"></div><figcaption><b>そっと合図</b><span>ちょうどいいときに、紫のライン。</span></figcaption></figure>
+        <figure><div class="phone"><img class="shot" src="../assets/v2/ja/coach-card.jpg" alt="Pipのカード：今週のふり返りと2つのアイデア" width="520" height="1125" loading="lazy"></div><figcaption><b>日曜日のふり返り</b><span>できたこと、つまずき、2つのアイデア。</span></figcaption></figure>
+        <figure><div class="phone"><img class="shot" src="../assets/v2/ja/coach-plan.jpg" alt="Pipの旅行プラン：一時停止して、帰ったら再開" width="520" height="1125" loading="lazy"></div><figcaption><b>予定が変わったら？</b><span>「旅行に行くよ」：連続記録はちゃんと待っててくれる。</span></figcaption></figure>
+      </div>
+      <p class="note">PipはAIなので間違えることもあります。同意なしには何も送信されません。 <a href="../privacy-policy.ja">プライバシー</a></p>
     </div>
   </section>
 
@@ -170,7 +183,7 @@
       <div class="head">
         <p class="kicker">ずっと無料 · のぞむならヒーロー級に</p>
         <h2>プレミアムの宝箱をひらこう</h2>
-        <p class="lead">きみのヒーローを、きみのスタイルで：ショップの全カタログ、毎月の限定アイテム、連続記録とともに育つドラゴンのブレイズ。</p>
+        <p class="lead">PipがきみのAIコーチに。そしてヒーローにはとびきりのスタイルを：ショップの全カタログ、毎月の限定アイテム、連続記録とともに育つドラゴンのブレイズ。</p>
       </div>
       <div class="vault" id="vault">
         <div class="fan">
@@ -182,6 +195,7 @@
       </div>
       <div class="deal">
         <div class="loot">
+          <div class="item r-ai"><i>AI</i><div><b>AIコーチのPip<span class="new">新登場</span></b><span>一週間を読んで、つまずきを見つけ、ワンタップの調整を提案。決めるのはきみ。</span></div></div>
           <div class="item r-leg"><i>B</i><div><b>ブレイズ</b><span>連続記録とともに、タマゴから伝説へ育つドラゴン。</span></div></div>
           <div class="item r-epic"><i>★</i><div><b>今月のアイテム</b><span>毎月もらえる限定コスメ。</span></div></div>
           <div class="item r-rare"><i>♛</i><div><b>全カタログ</b><span>帽子、衣装、アイテム、背景、テーマ。限定品も。</span></div></div>
@@ -208,9 +222,9 @@
     <div class="wrap">
       <div class="pass" id="pass">
         <div class="map">
-          <img src="../assets/v2/escales.png" alt="寄港地のルート：Web、Google Play、霧の中の App Store">
+          <img src="../assets/v2/escales.png" alt="寄港地の航路：Web、Google Play、App Store">
           <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
-          <span class="tag" style="left: 7%">WEB · 現在地</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · 霧の中</span>
+          <span class="tag" style="left: 7%">WEB</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag next" style="left: 76%">APP STORE</span>
         </div>
         <div class="body">
           <div class="left">
@@ -218,19 +232,15 @@
             <div class="legs">
               <div><small>出発</small><b>WEB</b></div>
               <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
-              <div><small>次の寄港地</small><b>GOOGLE PLAY</b></div>
+              <div><small>寄港地</small><b>iPHONE · WEB</b></div>
             </div>
-            <span class="stamp">まもなく</span>
-            <p class="note">Google が公開を開始したら日付が決まります。その次は App Store、Apple の審査がおわりしだい。</p>
+            <span class="stamp">配信中</span>
+            <p class="note">11月25日、App Store で配信開始。Google Play も数日以内に配信予定です。Web のアカウントでそのままアプリにログインでき、進行状況も引き継がれます。</p>
           </div>
-          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="ja" novalidate>
-            <span class="title">乗船を予約する<small>新しい寄港地ごとにお知らせします。</small></span>
-            <div class="field"><label for="wl-email">メールアドレス</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="メールアドレス"></div>
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>HabitQuestがApp StoreとGoogle Playで公開されたときに、メールを1通受け取ることに同意します。迷惑メールは送りません。いつでも解除できます。 <a href="../privacy-policy.ja">プライバシーポリシー</a></span></label>
-            <button class="btn" type="submit">乗船する <span class="arrow">▶</span></button>
-            <p class="waitlist-msg" role="status" data-ok="登録しました！公開日にメールでお知らせします。" data-error="うまくいきませんでした。メールアドレスを確認してもう一度お試しください。"></p>
-          </form>
+          <div class="right launch">
+            <span class="title">さあ、乗船！<small>iPhoneで無料</small></span>
+            <div class="stores"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="App Store からダウンロード"></a><span class="store-soon">Google Play · 数日以内に配信</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -239,10 +249,11 @@
   <section class="faq" id="faq">
     <div class="wrap">
       <h2>よくある質問</h2>
-      <details><summary>HabitQuestは無料ですか？</summary><p>はい。ゲームはすべて無料で遊べます。プレミアムは広告を消して特典を追加する任意のプランで、App StoreまたはGoogle Playの設定からいつでも解約できます。</p></details>
+      <details><summary>HabitQuestは無料ですか？</summary><p>はい。ゲームはすべて無料で遊べます。プレミアムはAIコーチのPipを追加し、広告を消して特典を加える任意のプランで、App StoreまたはGoogle Playの設定からいつでも解約できます。</p></details>
       <details><summary>どの端末で使えますか？</summary><p>iPhone、Androidスマホ、そしてウェブブラウザ。進行状況はアカウントに保存され、どこでも続きから遊べます。</p></details>
       <details><summary>対応言語は？</summary><p>日本語、英語、フランス語、韓国語、繁体字中国語（台湾）。</p></details>
       <details><summary>データは大丈夫？</summary><p>習慣は非公開です。分析ツールは使わず、データを販売することもありません。<a href="../privacy-policy.ja">プライバシーポリシー</a>をご覧ください。</p></details>
+      <details><summary>AIコーチのPipはどう動くの？</summary><p>プレミアムでは、Pipがクエスト、その理由、気分、メモを読んで、調整（一時停止、ミニ版、曜日の変更、新しいクエスト）を提案します。同意なしに何も変えません。回答のため、アプリ内で同意した後にのみ、これらのデータをAIの提供元であるAnthropicに送信します。モデルの学習には使われません。同意はいつでも取り消せます。</p></details>
       <details><summary>困ったときは</summary><p>アプリの設定 → サポートからご連絡いただくか、<a href="../support.ja">サポートページ</a>をご覧ください。</p></details>
     </div>
   </section>

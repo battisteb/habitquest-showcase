@@ -17,13 +17,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/v2/site-v2.css">
 <script src="assets/v2/site-v2.js" defer></script>
-<script src="assets/waitlist.js" defer></script>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#top"><img src="assets/v2/pip.png" alt=""><span>HabitQuest</span></a>
-    <nav aria-label="Sections"><a href="#regle">The game</a><a href="#voyage">The Voyage</a><a href="#boss">Bosses</a><a href="#premium">Premium</a></nav>
+    <nav aria-label="Sections"><a href="#regle">The game</a><a href="#voyage">The Voyage</a><a href="#boss">Bosses</a><a href="#coach">AI coach</a><a href="#premium">Premium</a></nav>
     <details class="langs"><summary>EN</summary><div>
       <a href="fr/" hreflang="fr" lang="fr">Français</a>
       <a href="ja/" hreflang="ja" lang="ja">日本語</a>
@@ -45,7 +44,7 @@
       <div class="card">
         <h1>Your habits.<br><span>Your adventure.</span></h1>
         <p class="lead">The habit tracker where every day you show up sails your ship forward.</p>
-        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">Start the adventure</a><small>Free · play right now in your browser</small></div>
+        <div class="ctas"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="assets/badges/app-store-en.svg" alt="Download on the App Store"></a><span class="store-soon">Google Play · in a few days</span><a class="btn" href="https://habitquest.expo.app">Play in the browser</a><small>Free on iPhone, Android and the web</small></div>
       </div>
     </div>
   </section>
@@ -53,7 +52,7 @@
   <div class="trust">
     <ul class="wrap">
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>Free forever</b><span>No card needed to start</span></div></li>
-      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>Play right now</b><span>On the web, soon on Google Play</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>Play right now</b><span>On iPhone, Android and the web</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>In 5 languages</b><span>English, French, Japanese, Korean, Chinese</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>Your data is yours</b><span>Delete your account at any time</span></div></li>
     </ul>
@@ -89,6 +88,20 @@
     <div class="row rv">
       <img src="assets/v2/pip.png" alt="Pip">
       <div class="bubble"><b>PIP</b><p>“Hi, I’m Pip! I change colour with your day and I’m with you every day. On rough days, we freeze your streak. No guilt.”</p></div>
+    </div>
+  </section>
+
+  <section class="coachsec" id="coach">
+    <div class="wrap">
+      <p class="kicker">NEW WITH PREMIUM · <span class="ia">AI</span></p>
+      <h2>Pip, your AI coach</h2>
+      <p class="lead">Pip reads your quests, your week and your mood. When things get stuck, he suggests a small tweak you apply in one tap. Pip suggests, you decide.</p>
+      <div class="figs">
+        <figure><div class="phone"><img class="shot" src="assets/v2/en/coach-line.jpg" alt="Pip’s violet line on the Today screen" width="520" height="1125" loading="lazy"></div><figcaption><b>He gives you a sign</b><span>A little violet line, at the right moment.</span></figcaption></figure>
+        <figure><div class="phone"><img class="shot" src="assets/v2/en/coach-card.jpg" alt="Pip’s card: the week’s review and two ideas" width="520" height="1125" loading="lazy"></div><figcaption><b>Your Sunday review</b><span>One win, what’s stuck, two ideas.</span></figcaption></figure>
+        <figure><div class="phone"><img class="shot" src="assets/v2/en/coach-plan.jpg" alt="Pip suggests a holiday plan: pause, then resume" width="520" height="1125" loading="lazy"></div><figcaption><b>Life changes?</b><span>“I’m going on holiday”: your streaks wait for you.</span></figcaption></figure>
+      </div>
+      <p class="note">Pip is an AI and can be wrong. Nothing is sent without your agreement. <a href="privacy-policy">Privacy</a></p>
     </div>
   </section>
 
@@ -170,7 +183,7 @@
       <div class="head">
         <p class="kicker">FREE FOREVER · HEROIC IF YOU WANT</p>
         <h2>Open the Premium chest</h2>
-        <p class="lead">Your hero, your style: the full shop catalog, an exclusive item every month, and Braise, the dragon that grows with your streak.</p>
+        <p class="lead">Pip becomes your AI coach, and your hero gets all the style: the full shop catalog, an exclusive item every month, and Braise, the dragon that grows with your streak.</p>
       </div>
       <div class="vault" id="vault">
         <div class="fan">
@@ -182,6 +195,7 @@
       </div>
       <div class="deal">
         <div class="loot">
+          <div class="item r-ai"><i>AI</i><div><b>Pip, your AI coach<span class="new">NEW</span></b><span>He reads your week, spots what’s stuck and suggests a tweak in one tap. You decide.</span></div></div>
           <div class="item r-leg"><i>B</i><div><b>Braise</b><span>The dragon that grows with your streak, from egg to Legend.</span></div></div>
           <div class="item r-epic"><i>★</i><div><b>Item of the month</b><span>An exclusive cosmetic every month.</span></div></div>
           <div class="item r-rare"><i>♛</i><div><b>Full catalog</b><span>Hats, outfits, items, backdrops and themes, exclusives included.</span></div></div>
@@ -208,9 +222,9 @@
     <div class="wrap">
       <div class="pass" id="pass">
         <div class="map">
-          <img src="assets/v2/escales.png" alt="The route of ports: the web, Google Play, then the App Store in the mist">
+          <img src="assets/v2/escales.png" alt="The route of ports: the web, Google Play and the App Store">
           <span class="mini"><img src="assets/v2/boat.png" alt=""></span>
-          <span class="tag" style="left: 7%">WEB · YOU ARE HERE</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · MIST</span>
+          <span class="tag" style="left: 7%">WEB</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag next" style="left: 76%">APP STORE</span>
         </div>
         <div class="body">
           <div class="left">
@@ -218,19 +232,15 @@
             <div class="legs">
               <div><small>FROM</small><b>WEB</b></div>
               <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
-              <div><small>NEXT PORT</small><b>GOOGLE PLAY</b></div>
+              <div><small>NOW OPEN</small><b>iPHONE · WEB</b></div>
             </div>
-            <span class="stamp">SOON</span>
-            <p class="note">The date lands as soon as Google opens production. Next port after that: the App Store, once Apple approves the iPhone app.</p>
+            <span class="stamp">OUT NOW</span>
+            <p class="note">Launched on November 25: HabitQuest is on the App Store, and Google Play follows in a few days. Your web account works in the app, progress included.</p>
           </div>
-          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="en" novalidate>
-            <span class="title">Save your seat on board<small>We tell you at every new port.</small></span>
-            <div class="field"><label for="wl-email">YOUR E-MAIL</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="Your e-mail"></div>
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>I agree to receive one e-mail when HabitQuest is available on the App Store and Google Play. No spam; unsubscribe anytime. <a href="privacy-policy">Privacy policy</a></span></label>
-            <button class="btn" type="submit">Board <span class="arrow">▶</span></button>
-            <p class="waitlist-msg" role="status" data-ok="You are on the list! We will write to you on launch day." data-error="That did not work. Check your e-mail and try again."></p>
-          </form>
+          <div class="right launch">
+            <span class="title">All aboard!<small>Free on iPhone</small></span>
+            <div class="stores"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="assets/badges/app-store-en.svg" alt="Download on the App Store"></a><span class="store-soon">Google Play · in a few days</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -239,10 +249,11 @@
   <section class="faq" id="faq">
     <div class="wrap">
       <h2>Questions</h2>
-      <details><summary>Is HabitQuest free?</summary><p>Yes. The whole game is free; Premium is an optional subscription that removes ads and adds extras. You can cancel it at any time in your App Store or Google Play settings.</p></details>
+      <details><summary>Is HabitQuest free?</summary><p>Yes. The whole game is free; Premium is an optional subscription that adds Pip, your AI coach, removes ads and adds extras. You can cancel it at any time in your App Store or Google Play settings.</p></details>
       <details><summary>Which devices?</summary><p>iPhone and Android phones, and any web browser. Your progress is saved to your account and follows you everywhere.</p></details>
       <details><summary>Which languages?</summary><p>English, French, Japanese, Korean and Traditional Chinese (Taiwan).</p></details>
       <details><summary>What about my data?</summary><p>Your habits are private. We use no analytics SDK and never sell your data. Read the <a href="privacy-policy">Privacy Policy</a>.</p></details>
+      <details><summary>How does Pip, the AI coach, work?</summary><p>With Premium, Pip reads your quests, their reasons, your mood and your notes to suggest tweaks (a pause, a mini version, new days, new quests). He changes nothing without your OK. To answer, this data is sent to our AI provider, Anthropic, only after you agree in the app, and it is not used to train its models. You can withdraw your agreement at any time.</p></details>
       <details><summary>I need help</summary><p>Write to us from Settings → Support in the app, or see the <a href="support">Support page</a>.</p></details>
     </div>
   </section>

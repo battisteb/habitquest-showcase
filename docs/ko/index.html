@@ -18,13 +18,12 @@
 <link href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css" rel="stylesheet">
 <link rel="stylesheet" href="../assets/v2/site-v2.css">
 <script src="../assets/v2/site-v2.js" defer></script>
-<script src="../assets/waitlist.js" defer></script>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#top"><img src="../assets/v2/pip.png" alt=""><span>HabitQuest</span></a>
-    <nav aria-label="Sections"><a href="#regle">게임 방법</a><a href="#voyage">항해</a><a href="#boss">보스</a><a href="#premium">프리미엄</a></nav>
+    <nav aria-label="Sections"><a href="#regle">게임 방법</a><a href="#voyage">항해</a><a href="#boss">보스</a><a href="#coach">AI 코치</a><a href="#premium">프리미엄</a></nav>
     <details class="langs"><summary>KO</summary><div>
       <a href="../" hreflang="en" lang="en">English</a>
       <a href="../fr/" hreflang="fr" lang="fr">Français</a>
@@ -46,7 +45,7 @@
       <div class="card">
         <h1>너의 습관이<br><span>너의 모험이 돼요.</span></h1>
         <p class="lead">지킨 하루하루가 너의 배를 앞으로 나아가게 하는 습관 트래커.</p>
-        <div class="ctas"><a class="btn" href="https://habitquest.expo.app">모험 시작하기</a><small>무료 · 브라우저에서 바로 플레이</small></div>
+        <div class="ctas"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="App Store에서 다운로드"></a><span class="store-soon">Google Play · 며칠 안에 출시</span><a class="btn" href="https://habitquest.expo.app">브라우저에서 플레이</a><small>iPhone, Android, 웹에서 무료</small></div>
       </div>
     </div>
   </section>
@@ -54,7 +53,7 @@
   <div class="trust">
     <ul class="wrap">
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="2" y="1" width="5" height="1" fill="#ffd25a"/><rect x="1" y="2" width="7" height="5" fill="#ffd25a"/><rect x="2" y="7" width="5" height="1" fill="#ffd25a"/><rect x="3" y="3" width="3" height="3" fill="#c08a00"/><rect x="4" y="3" width="1" height="3" fill="#ffd25a"/><rect x="2" y="2" width="1" height="1" fill="#fff4d6"/></svg><div><b>평생 무료</b><span>시작할 때 카드가 필요 없어요</span></div></li>
-      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>지금 바로 플레이</b><span>웹에서, 곧 Google Play에서도</span></div></li>
+      <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="1" width="9" height="6" fill="#d8dcf5"/><rect x="1" y="2" width="7" height="4" fill="#2f6fb8"/><rect x="2" y="3" width="2" height="2" fill="#2fa87a"/><rect x="5" y="4" width="2" height="1" fill="#fff4d6"/><rect x="3" y="7" width="3" height="1" fill="#d8dcf5"/><rect x="2" y="8" width="5" height="1" fill="#d8dcf5"/></svg><div><b>지금 바로 플레이</b><span>iPhone, Android, 웹에서</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="9" height="6" fill="#fff4d6"/><rect x="1" y="6" width="2" height="2" fill="#fff4d6"/><rect x="2" y="2" width="1" height="2" fill="#232c5c"/><rect x="4" y="2" width="1" height="2" fill="#232c5c"/><rect x="6" y="2" width="1" height="2" fill="#232c5c"/></svg><div><b>5개 언어</b><span>한국어, 영어, 프랑스어, 일본어, 중국어</span></div></li>
       <li><svg viewBox="0 0 9 9" aria-hidden="true"><rect x="1" y="0" width="7" height="1" fill="#2fa87a"/><rect x="0" y="1" width="9" height="4" fill="#2fa87a"/><rect x="1" y="5" width="7" height="2" fill="#2fa87a"/><rect x="2" y="7" width="5" height="1" fill="#2fa87a"/><rect x="3" y="8" width="3" height="1" fill="#2fa87a"/><rect x="2" y="3" width="1" height="1" fill="#ffffff"/><rect x="3" y="4" width="1" height="1" fill="#ffffff"/><rect x="4" y="3" width="1" height="1" fill="#ffffff"/><rect x="5" y="2" width="1" height="1" fill="#ffffff"/><rect x="6" y="1" width="1" height="1" fill="#ffffff"/></svg><div><b>데이터는 너의 것</b><span>언제든 계정 삭제 가능</span></div></li>
     </ul>
@@ -90,6 +89,20 @@
     <div class="row rv">
       <img src="../assets/v2/pip.png" alt="Pip">
       <div class="bubble"><b>PIP</b><p>“안녕, 나는 핍이야! 너의 하루에 따라 색이 바뀌고, 매일 너와 함께해. 힘든 날엔 연속 기록을 얼려 줄게. 자책하지 마.”</p></div>
+    </div>
+  </section>
+
+  <section class="coachsec" id="coach">
+    <div class="wrap">
+      <p class="kicker">프리미엄 신규 기능 · <span class="ia">AI</span></p>
+      <h2>AI 코치 Pip</h2>
+      <p class="lead">Pip은 너의 퀘스트, 한 주, 기분을 읽어요. 막힐 때는 한 번의 탭으로 적용하는 작은 조정을 제안해요. 제안은 Pip이, 결정은 네가.</p>
+      <div class="figs">
+        <figure><div class="phone"><img class="shot" src="../assets/v2/ko/coach-line.jpg" alt="오늘 화면의 Pip 보라색 줄" width="520" height="1125" loading="lazy"></div><figcaption><b>살짝 신호를 줘요</b><span>딱 좋은 순간에, 보라색 한 줄.</span></figcaption></figure>
+        <figure><div class="phone"><img class="shot" src="../assets/v2/ko/coach-card.jpg" alt="Pip의 카드: 이번 주 리뷰와 아이디어 두 개" width="520" height="1125" loading="lazy"></div><figcaption><b>일요일 리뷰</b><span>잘한 점, 막힌 점, 아이디어 두 개.</span></figcaption></figure>
+        <figure><div class="phone"><img class="shot" src="../assets/v2/ko/coach-plan.jpg" alt="Pip의 휴가 계획: 일시정지 후 다시 시작" width="520" height="1125" loading="lazy"></div><figcaption><b>생활이 바뀌면?</b><span>“휴가 가요”: 연속 기록은 기다려 줘요.</span></figcaption></figure>
+      </div>
+      <p class="note">Pip은 AI라서 틀릴 수 있어요. 동의 없이는 아무것도 보내지 않아요. <a href="../privacy-policy.ko">개인정보</a></p>
     </div>
   </section>
 
@@ -171,7 +184,7 @@
       <div class="head">
         <p class="kicker">평생 무료 · 원하면 영웅급으로</p>
         <h2>프리미엄 보물상자를 열어요</h2>
-        <p class="lead">너의 영웅을 너의 스타일로: 상점 전체 카탈로그, 매달 받는 한정 아이템, 연속 기록과 함께 자라는 드래곤 브레이즈.</p>
+        <p class="lead">Pip이 너의 AI 코치가 되고, 영웅은 멋진 스타일을: 상점 전체 카탈로그, 매달 받는 한정 아이템, 연속 기록과 함께 자라는 드래곤 브레이즈.</p>
       </div>
       <div class="vault" id="vault">
         <div class="fan">
@@ -183,6 +196,7 @@
       </div>
       <div class="deal">
         <div class="loot">
+          <div class="item r-ai"><i>AI</i><div><b>AI 코치 Pip<span class="new">신규</span></b><span>한 주를 읽고, 막힌 곳을 찾아, 한 번의 탭으로 조정을 제안해요. 결정은 네가.</span></div></div>
           <div class="item r-leg"><i>B</i><div><b>브레이즈</b><span>연속 기록과 함께 알에서 전설로 자라는 드래곤.</span></div></div>
           <div class="item r-epic"><i>★</i><div><b>이달의 아이템</b><span>매달 받는 한정 꾸미기 아이템.</span></div></div>
           <div class="item r-rare"><i>♛</i><div><b>전체 카탈로그</b><span>모자, 의상, 아이템, 배경, 테마. 한정품까지.</span></div></div>
@@ -209,9 +223,9 @@
     <div class="wrap">
       <div class="pass" id="pass">
         <div class="map">
-          <img src="../assets/v2/escales.png" alt="기항지 경로: 웹, Google Play, 안개 속 App Store">
+          <img src="../assets/v2/escales.png" alt="기항지 항로: 웹, Google Play, App Store">
           <span class="mini"><img src="../assets/v2/boat.png" alt=""></span>
-          <span class="tag" style="left: 7%">WEB · 현재 위치</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag" style="left: 76%">APP STORE · 안개</span>
+          <span class="tag" style="left: 7%">WEB</span><span class="tag next" style="left: 42%">GOOGLE PLAY</span><span class="tag next" style="left: 76%">APP STORE</span>
         </div>
         <div class="body">
           <div class="left">
@@ -219,19 +233,15 @@
             <div class="legs">
               <div><small>출발</small><b>WEB</b></div>
               <svg width="70" height="18" viewBox="0 0 40 10" aria-hidden="true"><path d="M0 4h4v2H0zM8 4h4v2H8zM16 4h4v2h-4zM24 4h4v2h-4zM32 2h2v6h-2zM34 3h2v4h-2zM36 4h2v2h-2z" fill="#14142a"></path></svg>
-              <div><small>다음 기항지</small><b>GOOGLE PLAY</b></div>
+              <div><small>열린 기항지</small><b>iPHONE · WEB</b></div>
             </div>
-            <span class="stamp">곧 출항</span>
-            <p class="note">Google이 정식 출시를 열면 날짜가 정해져요. 그다음은 App Store, Apple 심사가 끝나는 대로.</p>
+            <span class="stamp">출시</span>
+            <p class="note">11월 25일 출시: 이제 App Store에서 만나요. Google Play는 며칠 안에 열려요. 웹 계정으로 앱에 로그인하면 진행 상황도 그대로예요.</p>
           </div>
-          <form class="right waitlist" id="waitlist" data-url="https://aksxyaullvozlkzcegth.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrc3h5YXVsbHZvemxremNlZ3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NDg2MjUsImV4cCI6MjA4MjEyNDYyNX0.9GfZsW1PqDnOcV2zuOaqGrt1zj76PTwss6OfFl0PVOo" data-lang="ko" novalidate>
-            <span class="title">승선 예약하기<small>새 기항지마다 알려 드려요.</small></span>
-            <div class="field"><label for="wl-email">이메일</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="이메일 주소"></div>
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent"><input id="wl-consent" name="consent" type="checkbox" required> <span>HabitQuest가 App Store와 Google Play에 출시되면 이메일 1통을 받는 데 동의해요. 스팸은 없고, 언제든 취소할 수 있어요. <a href="../privacy-policy.ko">개인정보 처리방침</a></span></label>
-            <button class="btn" type="submit">승선하기 <span class="arrow">▶</span></button>
-            <p class="waitlist-msg" role="status" data-ok="등록했어요! 출시되면 이메일로 알려 드릴게요." data-error="잘 안 됐어요. 이메일 주소를 확인하고 다시 시도해 주세요."></p>
-          </form>
+          <div class="right launch">
+            <span class="title">모두 승선!<small>iPhone에서 무료</small></span>
+            <div class="stores"><a class="store" href="https://apps.apple.com/app/id6820433050"><img src="../assets/badges/app-store-en.svg" alt="App Store에서 다운로드"></a><span class="store-soon">Google Play · 며칠 안에 출시</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -240,10 +250,11 @@
   <section class="faq" id="faq">
     <div class="wrap">
       <h2>자주 묻는 질문</h2>
-      <details><summary>HabitQuest는 무료인가요?</summary><p>네. 게임은 모두 무료로 즐길 수 있어요. 프리미엄은 광고를 없애고 혜택을 더하는 선택 플랜이고, App Store 또는 Google Play 설정에서 언제든 해지할 수 있어요.</p></details>
+      <details><summary>HabitQuest는 무료인가요?</summary><p>네. 게임은 모두 무료로 즐길 수 있어요. 프리미엄은 AI 코치 Pip을 더하고, 광고를 없애고 혜택을 더하는 선택 플랜이고, App Store 또는 Google Play 설정에서 언제든 해지할 수 있어요.</p></details>
       <details><summary>어떤 기기에서 쓸 수 있나요?</summary><p>iPhone, Android 스마트폰, 그리고 웹 브라우저. 진행 상황은 계정에 저장돼서 어디서든 이어서 할 수 있어요.</p></details>
       <details><summary>지원 언어는?</summary><p>한국어, 영어, 프랑스어, 일본어, 중국어 번체(대만).</p></details>
       <details><summary>내 데이터는 안전한가요?</summary><p>습관은 비공개예요. 분석 도구를 쓰지 않고, 데이터를 판매하지도 않아요. <a href="../privacy-policy.ko">개인정보 처리방침</a>을 확인해 주세요.</p></details>
+      <details><summary>AI 코치 Pip은 어떻게 작동하나요?</summary><p>프리미엄에서 Pip은 퀘스트, 그 이유, 기분, 메모를 읽고 조정(일시정지, 미니 버전, 요일 변경, 새 퀘스트)을 제안해요. 동의 없이 아무것도 바꾸지 않아요. 답변을 위해 앱에서 동의한 후에만 이 데이터를 AI 제공업체 Anthropic에 보내며, 모델 학습에는 사용되지 않아요. 동의는 언제든지 철회할 수 있어요.</p></details>
       <details><summary>도움이 필요하면?</summary><p>앱의 설정 → 고객 지원으로 연락하거나 <a href="../support.ko">고객 지원 페이지</a>를 확인해 주세요.</p></details>
     </div>
   </section>
